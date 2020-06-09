@@ -1,9 +1,19 @@
 .grid {
     display: grid;
 
-    &.grid-2 {
+    &.grid-3 {
         grid-gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
+}
 
+header {
+    .grid {
+        &.grid-3 {
+            @media (max-width: 767px) {
+                grid-gap: 10px;
+                grid-template-columns: 8fr;
+            }
+        }
+    }
 }

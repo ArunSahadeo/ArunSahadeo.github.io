@@ -23,14 +23,7 @@
     }
 
     &.content-grid-two-columns {
-        article {
-            max-width: 65%;
-        }
-
         aside {
-            position: absolute;
-            right: calc(100% - 98%);
-            top: 10%;
             margin-top: 5px;
 
             div {
@@ -46,6 +39,18 @@
                 display: block;
                 font-weight: bold;
                 margin-top: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            article {
+                max-width: 65%;
+            }
+
+            aside {
+                position: absolute;
+                right: calc(100% - 98%);
+                top: 10%;
             }
         }
     }
