@@ -5,7 +5,7 @@ header {
     width: 100%;
     z-index: 10;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
@@ -19,7 +19,7 @@ header {
     }
 
     .top-logo {
-        @media (min-width: 768px) {
+        @media (min-width: 1200px) {
             margin-left: 20px;
         }
 
@@ -40,7 +40,7 @@ header {
         text-align: center;
 
         &:first-of-type {
-            @media (min-width: 768px) {
+            @media (min-width: 1200px) {
                 text-align: left;
             }
         }
@@ -59,7 +59,7 @@ header {
                 padding: 0.5rem 1rem;
 
                 &:not(:last-of-type) {
-                    @media (min-width: 768px) {
+                    @media (min-width: 1200px) {
                         margin-right: 5%;
                     }
                 }
