@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    </head>
+    <body>
+        {% include components/top/header/navigation.html %}
+        <section class="content-grid margin-vert-5-rem">
+            <article class="bg-charcoal-grey">
+                {{ content }}
+            </article>
+        </section>
+        {% include components/bottom/footer/navigation.html %}
+    </body>
+</html>

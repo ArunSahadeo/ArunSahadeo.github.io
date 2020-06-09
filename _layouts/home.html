@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+        <script src="{{ '/assets/js/components/DailyQuote.js' | relative_url }}"></script>
+    </head>
+    <body>
+        {% include components/top/header/navigation.html %}
+        <section class="content-grid content-grid-two-columns margin-vert-5-rem">
+            <article class="bg-charcoal-grey">
+                {{ content }}
+            </article>
+
+            <aside>
+                <div class="bg-charcoal-grey">
+                    <h3>
+                        Current Location
+                    </h3>
+
+                    <p>
+                        {{ site.location }}
+                    </p>
+
+                    <h3>
+                        Current Employer
+                    </h3>
+
+                    <p>
+                        {{ site.company }}
+                    </p>
+                </div>
+
+                <div class="bg-charcoal-grey">
+                    <h3>
+                        Quote of the Day
+                    </h3>
+
+                    <p class="daily-quote max-width-300"></p>
+                </div>
+            </aside>
+        </section>
+        {% include components/bottom/footer/navigation.html %}
+    </body>
+</html>

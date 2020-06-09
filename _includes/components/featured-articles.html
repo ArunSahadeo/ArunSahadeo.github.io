@@ -1,0 +1,21 @@
+<section class="featured-articles">
+    {% for article in site.posts %}
+    <article>
+        <a href="{{ article.url}}">
+        {% if article.thumbnail.src and article.thumbnail.src != '' and article.thumbnail.src != nil %}
+            <img src="{{ article.thumbnail.src }}"{% if article.thumbnail.alt and article.thumbnail.alt != '' and article.thumbnail.src != nil %} alt="{{ article.thumbnail.alt }}"{% endif %} />
+        {% else %}
+            <img src="https://placekitten.com/300/300" alt="Cat placeholder" />
+        {% endif %}
+        </a>
+
+        <a href="{{article.url}}">
+            <h4>
+                {{ article.title }}
+            </h4>
+
+            <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
+        </a>
+    </article>
+    {% endfor %}
+</section>

@@ -1,0 +1,17 @@
+$whitney-book: 'Whitney-Book';
+
+@font-face {
+    font-family: $whitney-book;
+    src: local($whitney-book),
+        url('#{$fontsDir}/Whitney-Book.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/Whitney-Book.woff') format('woff'),
+        url('#{$fontsDir}/Whitney-Book.woff2') format('woff2'),
+        url('#{$fontsDir}/Whitney-Book.ttf') format('truetype'),
+        url('#{$fontsDir}/Whitney-Book.svg#Whitney-Book') format('svg'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.whitney-book {
+    font-family: $whitney-book, sans-serif;
+}

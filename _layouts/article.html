@@ -1,0 +1,54 @@
+{% assign day = page.date | date: "%-d" %}
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    </head>
+    <body>
+        {% include components/top/header/navigation.html %}
+        <section class="content-grid margin-vert-10-rem{% if page.table_of_contents %} content-grid-two-columns{% endif %}">
+            <article class="bg-charcoal-grey content-article"> 
+                {% if article.thumbnail.src and article.thumbnail.src != '' and article.thumbnail.src != nil %}
+                    <img src="{{ article.thumbnail.src }}"{% if article.thumbnail.alt and article.thumbnail.alt != '' and article.thumbnail.src != nil %} alt="{{ article.thumbnail.alt }}"{% endif %} />
+                {% endif %}
+
+                    <h1>
+                        {{ page.title }}
+                    </h1>
+
+                    <small class="postmeta">
+                        {% case day %}
+                        {% when '1' or '21' or '31' %}
+                        {{ day }}st
+                        {% when '2' or '22' %}
+                        {{ day }}nd
+                        {% when '3' or '23' %}
+                        {{ day }}rd
+                        {% else %}
+                        {{ day }}th
+                        {% endcase %}
+
+                        {{ page.date | date: "%B %Y" }}
+                    </small>
+
+                    <small class="postmeta">
+                        <em>{{ page.author }}</em>
+                    </small>
+ 
+                {{ content }}
+            </article>
+
+            {% if page.table_of_contents %}
+            <aside>
+                <div class="bg-charcoal-grey">
+                    <h3>
+                        Table of Contents
+                    </h3>
+                </div>
+            </aside>
+            {% endif %}
+        </section>
+        {% include components/bottom/footer/navigation.html %}
+    </body>
+</html>

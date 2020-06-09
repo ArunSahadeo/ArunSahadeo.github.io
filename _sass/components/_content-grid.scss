@@ -1,0 +1,52 @@
+.content-grid {
+    max-width: 978px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $gainsboro-white;
+
+    h1, .h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    @include typography {
+        text-shadow: 0 1px 3px rgba($black, .5); 
+        font-family: $whitney-book, sans-serif;
+    }
+
+    > article {
+        @include rounded-borders(1.5%);
+        padding: 0.5rem 2.5rem;
+    }
+
+    &.content-grid-two-columns {
+        article {
+            max-width: 65%;
+        }
+
+        aside {
+            position: absolute;
+            right: calc(100% - 98%);
+            top: 10%;
+            margin-top: 5px;
+
+            div {
+                @include rounded-borders(1.5%);
+                padding: 0.5rem 5rem;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            .author {
+                display: block;
+                font-weight: bold;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
