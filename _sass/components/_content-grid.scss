@@ -55,3 +55,15 @@
         }
     }
 }
+
+.error-page {
+    .content-grid {
+        article {
+            padding-bottom: 3rem;
+
+            a {
+                color: $summer-sky-blue; 
+            }
+        }
+    }
+}
