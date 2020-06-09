@@ -7,7 +7,7 @@ header {
     padding-top: 1rem;
     padding-bottom: 1rem;
 
-    &:not([class*="bg-"]) {
+    &:not([class*="bg-"]):not(.scrolled) {
         @extend .bg-nero-black;
     }
 
