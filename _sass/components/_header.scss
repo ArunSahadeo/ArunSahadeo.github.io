@@ -39,6 +39,12 @@ header {
         margin: 0;
         text-align: center;
 
+        &:first-of-type {
+            @media (min-width: 768px) {
+                text-align: left;
+            }
+        }
+
         ul {
             margin: 0;
 
