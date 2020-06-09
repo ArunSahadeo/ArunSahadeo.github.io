@@ -14,7 +14,7 @@ categories: news
 
 After much deliberation and head-scratching, I have managed to churn out a passable portfolio site.
 
-I decided to build this site on [Jekyll][jekyll-site]{:target="_blank"} and host it on [GitHub Pages][github-pages]{:target="_blank"}, as the latter offers free hosting and Jekyll offers me the flexibility I need.
+I decided to build this site on [Jekyll][jekyll-site]{:target="_blank"} and host it on [GitHub Pages][github-pages]{:target="_blank"}, as the latter offers free hosting, whilst the former offers me the flexibility and scalability I need.
 
 Granted, I will probably overhaul entire sections of this site before too long, but this should suffice for now.
 

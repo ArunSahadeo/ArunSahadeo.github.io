@@ -24,15 +24,13 @@ description: >- # this means to ignore newlines until "location:"
     Software developer and systems administrator based in Greater London
 location: London, UK
 company: Wirebox Consultancy
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
 # Social accounts
 social_accounts:
     twitter: ''
     linkedin: 'https://www.linkedin.com/in/arun-sahadeo-00836883/'
     github: 'https://github.com/ArunSahadeo'
-
+# Permalink settings
+permalink: /blog/:title
 # Build settings
 theme: minima
 plugins:
