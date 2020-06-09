@@ -6,3 +6,12 @@ footer {
     padding-bottom: 1.5rem;
     text-align: center;
 }
+
+.error-page {
+    footer {
+        @media (min-width: 1440px) {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
