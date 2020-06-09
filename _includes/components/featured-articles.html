@@ -9,13 +9,17 @@
         {% endif %}
         </a>
 
-        <a href="{{article.url}}">
             <h4>
                 {{ article.title }}
             </h4>
 
             <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
-        </a>
+
+            <p>
+                <a class="btn bg-summer-sky-blue" title="Read more" href="{{article.url}}">
+                    Read More
+                </a>
+            </p>
     </article>
     {% endfor %}
 </section>

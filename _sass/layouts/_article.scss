@@ -21,13 +21,15 @@
 .content-article {
     p {
         a {
-            transition: opacity .20s ease-in-out;
-            color: $summer-sky-blue;
-            opacity: .7;
+            &:not([class]) {
+                transition: opacity .20s ease-in-out;
+                color: $summer-sky-blue;
+                opacity: .7;
 
-            &:hover {
-                opacity: 1;
-                text-decoration: underline;
+                &:hover {
+                    opacity: 1;
+                    text-decoration: underline;
+                }
             }
         }
     }
