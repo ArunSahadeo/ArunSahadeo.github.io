@@ -1,0 +1,39 @@
+<section class="grid grid-3 margin-top-3-rem">
+    {% for resource in site.data.resources %}
+    {% if resource.path == nil %}
+    {% break %}
+    {% endif %}
+
+    {% assign filetype = resource.path | split: '.' | last %}
+
+    <div class="resource">
+        <a href="{{ resource.path }}"{% if filetype == 'pdf' %} target="_blank"{% endif %}>
+            {% case filetype %}
+            {% when 'doc' or 'docx' %}
+                <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msword.png' | relative_url }}" alt="Microsoft Word" />
+            {% when 'ppt' or 'pptx' %}
+                <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msppt.png' | relative_url }}" alt="Microsoft PowerPoint" />
+            {% when 'pdf' %}
+                <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/adobepdf.png' | relative_url }}" alt="Portable Document Format (PDF)" />
+            {% when 'xls' or 'xlsx' or 'csv' %}
+                <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msexcel.png' | relative_url }}" alt="Microsoft Excel" />
+            {% endcase %}
+        </a>
+
+        <h3>
+            {{ resource.name }}
+            {% if resource.category %}
+            <em>
+                ({{ resource.category }})
+            </em>
+            {% endif %}
+        </h3>
+
+        {% if resource.short_description %}
+        <p>
+            {{ resource.short_description }}
+        </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
