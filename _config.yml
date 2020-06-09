@@ -35,8 +35,16 @@ permalink: /blog/:title
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 sass:
   style: compact
+
+defaults:
+  -
+    scope:
+        path: 'assets/files/*.pdf'
+    values:
+        sitemap: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
