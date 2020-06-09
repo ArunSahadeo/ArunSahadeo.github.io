@@ -5,7 +5,7 @@ header {
     width: 100%;
     z-index: 10;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
@@ -19,7 +19,7 @@ header {
     }
 
     .top-logo {
-        @media (min-width: 1200px) {
+        @media (min-width: 768px) {
             margin-left: 20px;
         }
 
@@ -40,27 +40,26 @@ header {
         text-align: center;
 
         &:first-of-type {
-            @media (min-width: 1200px) {
+            @media (min-width: 768px) {
                 text-align: left;
             }
         }
 
         ul {
             margin: 0;
-
-            @media (max-width: 767px) {
-                padding-left: 0;
-            }
+            padding-left: 0;
             
             li {
                 color: $summer-sky-blue;
                 font-family: $whitney-book, sans-serif;
                 font-size: 1.2rem;
-                padding: 0.5rem 1rem;
 
-                &:not(:last-of-type) {
-                    @media (min-width: 1200px) {
-                        margin-right: 5%;
+                &:not(.current) {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+
+                    &:not(:last-of-type) {
+                        margin-right: 2.5%;
                     }
                 }
 
@@ -68,6 +67,8 @@ header {
                     background-color: $summer-sky-blue;
                     border-radius: 5px;
                     color: $white;
+                    padding: 0.5rem 1rem;
+                    margin-right: 2%;
                 }
             }
         }
