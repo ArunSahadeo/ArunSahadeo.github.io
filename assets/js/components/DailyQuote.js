@@ -28,30 +28,32 @@ class DailyQuote {
                 return;
             }
 
-            fetch('https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en', {
-                method: 'GET',
-                mode: 'cors',
+            fetch('https://api.paperquotes.com/quotes?language=en', {
                 headers: {
                     'Content-Type': 'application/json'
                 },
             })
             .then(response => response.json())
             .then(data => {
-                if (!data.hasOwnProperty('quoteText')) {
+                if (!data.hasOwnProperty('results') || typeof data.results[0] != 'object') {
                     return;
                 }
 
-                let quote = new String('<q cite="' + data.quoteLink + '">' + data.quoteText + '</q>');
+                const quoteDetails = data.results[0];
+                let quote = new String('<q>' + quoteDetails.quote + '</q>');
                 let tomorrow = new Date();
                 tomorrow.setDate(tomorrow.getDate() + 1);
 
-                if (data.hasOwnProperty('quoteAuthor')) {
-                    quote += ('<small class="author">' + data.quoteAuthor + '</small>');
+                if (quoteDetails.hasOwnProperty('author') && quoteDetails.author != null) {
+                    quote += ('<small class="author">' + quoteDetails.author + '</small>');
                 }
 
                 localStorage.setItem('dailyQuote', quote);
                 localStorage.setItem('dailyQuoteExpirationDate', tomorrow);
                 elem.innerHTML = quote;
+            })
+            .catch(function (err) {
+                console.log(err);
             })
             ;
         });
