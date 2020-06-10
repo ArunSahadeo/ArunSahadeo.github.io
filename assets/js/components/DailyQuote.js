@@ -39,7 +39,12 @@ class DailyQuote {
                     return;
                 }
 
-                const quoteDetails = data.results[0];
+                const quoteDetails = data.results[(Math.floor(Math.random() * Object.keys(data).length) + 1)];
+
+                if (typeof quoteDetails === 'undefined') {
+                    return;
+                }
+
                 let quote = new String('<q>' + quoteDetails.quote + '</q>');
                 let tomorrow = new Date();
                 tomorrow.setDate(tomorrow.getDate() + 1);
