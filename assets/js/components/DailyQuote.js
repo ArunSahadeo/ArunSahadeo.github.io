@@ -23,7 +23,7 @@ class DailyQuote {
         const dailyQuoteExpirationDate = this.dailyQuoteExpirationDate;
 
         this.elems.forEach(function (elem) {
-            if (dailyQuote != '' && typeof dailyQuoteExpirationDate != 'undefined' && dailyQuoteExpirationDate != new Date().getDate()) {
+            if (dailyQuote != '' && (dailyQuoteExpirationDate != null && dailyQuoteExpirationDate != new Date().getDate())) {
                 elem.innerHTML = dailyQuote;
                 return;
             }
@@ -49,7 +49,7 @@ class DailyQuote {
                 }
 
                 localStorage.setItem('dailyQuote', quote);
-                localStorage.setItem('dailyQuoteExpirationDate', tomorrow);
+                localStorage.setItem('dailyQuoteExpirationDate', tomorrow.getDate());
                 elem.innerHTML = quote;
             })
             .catch(function (err) {
