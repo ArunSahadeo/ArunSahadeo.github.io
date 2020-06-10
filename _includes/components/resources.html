@@ -7,20 +7,24 @@
     {% assign filetype = resource.path | split: '.' | last %}
 
     <div class="resource">
-        <a href="{{ resource.path }}"{% if filetype == 'pdf' %} target="_blank"{% endif %}>
+        <a href="{{ resource.path }}"{% if filetype != nil and filetype == 'pdf' %} target="_blank"{% endif %} class="display-block text-center">
             {% case filetype %}
             {% when 'doc' or 'docx' %}
-                <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msword.png' | relative_url }}" alt="Microsoft Word" />
+            <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msword.png' | relative_url }}" alt="Microsoft Word" />
             {% when 'ppt' or 'pptx' %}
-                <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msppt.png' | relative_url }}" alt="Microsoft PowerPoint" />
+            <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msppt.png' | relative_url }}" alt="Microsoft PowerPoint" />
             {% when 'pdf' %}
-                <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/adobepdf.png' | relative_url }}" alt="Portable Document Format (PDF)" />
+            <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/adobepdf.png' | relative_url }}" alt="Portable Document Format (PDF)" />
             {% when 'xls' or 'xlsx' or 'csv' %}
-                <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msexcel.png' | relative_url }}" alt="Microsoft Excel" />
+            <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msexcel.png' | relative_url }}" alt="Microsoft Excel" />
+            {% else %}
+            {% if resource.path contains 'play.google.com' %}
+            <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/play-store.png' | relative_url }}" alt="Google Play Store" />
+            {% endif %}
             {% endcase %}
         </a>
 
-        <h3>
+        <h3 class="text-center">
             {{ resource.name }}
             {% if resource.category %}
             <em>
@@ -30,7 +34,7 @@
         </h3>
 
         {% if resource.short_description %}
-        <p>
+        <p class="text-center">
             {{ resource.short_description }}
         </p>
         {% endif %}

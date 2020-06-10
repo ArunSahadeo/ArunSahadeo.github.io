@@ -1,4 +1,4 @@
-<section class="featured-articles">
+<section class="featured-articles equalise-heights" data-targets="article > h4">
     {% for article in site.posts %}
     <article>
         <a href="{{ article.url}}">
@@ -13,6 +13,12 @@
                 {{ article.title }}
             </h4>
 
+            {% if article.categories %}
+            <small class="article-categories">
+                Categories: {{ article.categories }}
+            </small>
+            {% endif %}
+
             <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
 
             <p>
@@ -23,3 +29,5 @@
     </article>
     {% endfor %}
 </section>
+
+<script src="{{ '/assets/js/components/EqualiseHeights.js' | relative_url }}"></script>
