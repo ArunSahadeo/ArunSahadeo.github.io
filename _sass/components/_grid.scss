@@ -9,6 +9,11 @@
     &.equal-heights {
         grid-auto-rows: 1fr;
     }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
 
 header {
