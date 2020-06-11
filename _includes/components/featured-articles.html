@@ -2,8 +2,8 @@
     {% for article in site.posts %}
     <article>
         <a href="{{ article.url}}">
-        {% if article.thumbnail.src and article.thumbnail.src != '' and article.thumbnail.src != nil %}
-            <img src="{{ article.thumbnail.src }}"{% if article.thumbnail.alt and article.thumbnail.alt != '' and article.thumbnail.src != nil %} alt="{{ article.thumbnail.alt }}"{% endif %} />
+        {% if article.thumbnail.url and article.thumbnail.url != '' and article.thumbnail.url != nil %}
+            <img src="{{ article.thumbnail.url | relative_url }}"{% if article.thumbnail.alt and article.thumbnail.alt != '' and article.thumbnail.url != nil %} alt="{{ article.thumbnail.alt }}"{% endif %} />
         {% else %}
             <img src="https://placekitten.com/300/300" alt="Cat placeholder" />
         {% endif %}

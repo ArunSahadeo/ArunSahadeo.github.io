@@ -7,37 +7,45 @@
         <script src="{{ '/assets/js/components/StickyHeader.js' | relative_url }}"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {% if page.description and page.description != '' and page.description != nil %}
+        <meta name="description" content="{{ page.description }}" />
+        {% endif %}
+
+        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}
+        <meta name="keywords" content="{{ page.keywords | join: ", " }}" />
+        {% endif %}
     </head>
     <body>
         {% include components/top/header/navigation.html %}
         <section class="content-grid margin-vert-10-rem{% if page.table_of_contents %} content-grid-two-columns{% endif %}">
             <article class="bg-charcoal-grey content-article"> 
-                {% if article.thumbnail.src and article.thumbnail.src != '' and article.thumbnail.src != nil %}
-                    <img src="{{ article.thumbnail.src }}"{% if article.thumbnail.alt and article.thumbnail.alt != '' and article.thumbnail.src != nil %} alt="{{ article.thumbnail.alt }}"{% endif %} />
+                <h1>
+                    {{ page.title }}
+                </h1>
+
+                {% if page.thumbnail.url and page.thumbnail.url != '' and page.thumbnail.url != nil %}
+                    <div class="featured-image" style="background-image: url({{ page.thumbnail.url | relative_url }});"{% if page.thumbnail.alt and page.thumbnail.alt != '' and page.thumbnail.alt != nil %} role="img" aria-label="{{ page.thumbnail.alt }}"{% endif %}></div>
                 {% endif %}
 
-                    <h1>
-                        {{ page.title }}
-                    </h1>
+                <small class="postmeta">
+                    {% case day %}
+                    {% when '1' or '21' or '31' %}
+                    {{ day }}st
+                    {% when '2' or '22' %}
+                    {{ day }}nd
+                    {% when '3' or '23' %}
+                    {{ day }}rd
+                    {% else %}
+                    {{ day }}th
+                    {% endcase %}
 
-                    <small class="postmeta">
-                        {% case day %}
-                        {% when '1' or '21' or '31' %}
-                        {{ day }}st
-                        {% when '2' or '22' %}
-                        {{ day }}nd
-                        {% when '3' or '23' %}
-                        {{ day }}rd
-                        {% else %}
-                        {{ day }}th
-                        {% endcase %}
+                    {{ page.date | date: "%B %Y" }}
+                </small>
 
-                        {{ page.date | date: "%B %Y" }}
-                    </small>
-
-                    <small class="postmeta">
-                        <em>{{ page.author }}</em>
-                    </small>
+                <small class="postmeta">
+                    <em>{{ page.author }}</em>
+                </small>
  
                 {{ content }}
 
