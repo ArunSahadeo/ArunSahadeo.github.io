@@ -7,6 +7,14 @@
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
 
+    @media (max-width: 767px) {
+        grid-template-columns: 3fr;
+
+        article {
+            text-align: center;
+        }
+    }
+
     article {
         h4 {
             font-size: 1.5rem;
@@ -36,6 +44,23 @@
 
     img {
         max-width: 100%;
+    }
+
+    h4 {
+        a {
+            color: $summer-sky-blue;
+            font-size: 1.2rem;
+        }
+    }
+
+    h3, h4 {
+        a {
+            transition: .5s;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 

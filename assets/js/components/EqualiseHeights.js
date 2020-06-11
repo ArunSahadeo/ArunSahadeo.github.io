@@ -12,22 +12,29 @@ class EqualiseHeights {
 
     equaliseHeights () {
         this.elems.forEach((elem) => {
-            var maxHeight = 0;
-
-            if (typeof elem.dataset.targets != 'undefined') {
-                var targets = elem.querySelectorAll(elem.dataset.targets);
-            } else {
-                var targets = elem;
+            if (typeof elem.dataset.targets === 'undefined' || (typeof parseInt(elem.dataset.minWidth) != 'number' || window.outerWidth < parseInt(elem.dataset.minWidth))) {
+                return;
             }
 
-            targets.forEach((target) => {
-                if (target.offsetHeight > maxHeight) {
-                    maxHeight = target.offsetHeight;
+            var 
+                targets = elem.querySelectorAll(elem.dataset.targets),
+                maxHeights = []
+            ;
+
+            targets.forEach(target => {
+                if (!maxHeights[target.nodeName.toLowerCase()]) {
+                    maxHeights[target.nodeName.toLowerCase()] = target.offsetHeight;
+                    target.style.height = new String(maxHeights[target.nodeName.toLowerCase()] + 'px');
+                    return;
                 }
 
-                if (maxHeight > 0) {
-                    target.style.height = new String(maxHeight + 'px');
+                if (target.offsetHeight > maxHeights[target.nodeName.toLowerCase()]) {
+                    maxHeights[target.nodeName.toLowerCase()] = target.offsetHeight;
                 }
+            });
+
+            targets.forEach(target => {
+                target.style.height = new String(maxHeights[target.nodeName.toLowerCase()] + 'px');
             });
         });
     }
