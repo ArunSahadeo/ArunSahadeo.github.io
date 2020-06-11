@@ -10,7 +10,7 @@
   short_description: >-
     A register of training providers in the UK from <a href="https://www.gov.uk/" target="_blank">GOV.UK</a> that may be eligible for AEB funding
 
-- name: Curriculum vitae (CV)<br />
+- name: Curriculum vitae (CV)
   path: assets/files/linkedin-cv.pdf
   category: Personal
   short_description: >-
