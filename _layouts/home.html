@@ -42,6 +42,22 @@
 
                     <p class="daily-quote max-width-300"></p>
                 </div>
+
+                {% if site.reading_list != nil and site.reading_list.size > 0 %}
+                <div class="bg-charcoal-grey">
+                    <h3>
+                        What am I reading right now?
+                    </h3>
+
+                    <ul class="list-star">
+                        {% for book in site.reading_list %}
+                        <li class="icon-star font-size-1-point-2-rem">
+                            <em>{{ book }}</em>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
             </aside>
         </section>
         {% include components/bottom/footer/navigation.html %}

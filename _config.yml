@@ -24,6 +24,10 @@ description: >- # this means to ignore newlines until "location:"
     Software developer and systems administrator based in Greater London
 location: London, UK
 company: Wirebox Consultancy
+# Reading list
+reading_list:
+    - Chemistry Concepts &amp; Problems&#58; A Self-Teaching Guide
+    - Basic Physics&#58; A Self-Teaching Guide
 # Social accounts
 social_accounts:
     twitter: ''
