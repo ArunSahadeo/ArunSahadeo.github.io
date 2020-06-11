@@ -6,8 +6,14 @@
 
     {% assign filetype = resource.path | split: '.' | last %}
 
+    {% unless (filetype != nil and filetype == 'pdf') or (resource.path contains '//') %}
+    {% assign open_in_new_tab = false %}
+    {% else %}
+    {% assign open_in_new_tab = true %}
+    {% endunless %}
+
     <div class="resource">
-        <a href="{{ resource.path }}"{% if filetype != nil and filetype == 'pdf' %} target="_blank"{% endif %} class="display-block text-center">
+        <a href="{{ resource.path }}"{% if open_in_new_tab %} target="_blank"{% endif %} class="display-block text-center">
             {% case filetype %}
             {% when 'doc' or 'docx' %}
             <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/msword.png' | relative_url }}" alt="Microsoft Word" />
