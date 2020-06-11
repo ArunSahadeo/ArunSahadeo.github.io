@@ -1,4 +1,4 @@
-<section class="grid grid-3 margin-top-3-rem">
+<section class="grid grid-3 margin-top-3-rem equalise-heights" data-targets=".resource > h3" data-min-width="768">
     {% for resource in site.data.resources %}
     {% if resource.path == nil %}
     {% break %}
@@ -27,6 +27,9 @@
             {% if resource.path contains 'play.google.com' %}
             <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/play-store.png' | relative_url }}" alt="Google Play Store" />
             {% endif %}
+            {% if resource.path contains 'apps.apple.com' %}
+            <img class="max-width-100-pc max-width-35-pc-xl-up" src="{{ 'assets/images/appstore.png' | relative_url }}" alt="App Store" />
+            {% endif %}
             {% endcase %}
         </a>
 
@@ -47,3 +50,5 @@
     </div>
     {% endfor %}
 </section>
+
+<script src="{{ 'assets/js/components/EqualiseHeights.js' | relative_url }}"></script>
