@@ -8,6 +8,14 @@ thumbnail:
     url: ''
     alt: ''
 categories: news
+description: >-
+    My first post, outlining my intentions and direction for my blog.
+keywords:
+    - Blogging
+    - Jekyll
+    - GitHub
+    - Webdev
+    - SEO
 ---
 
 ![Young Frankenstein](https://i.pinimg.com/originals/ca/dd/c9/caddc9872c2de2be42e0965cbbfc0ca9.gif "Young Frankenstein")
