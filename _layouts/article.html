@@ -1,20 +1,12 @@
-{% assign day = page.date | date: "%-d" %}
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-        <script src="{{ '/assets/js/components/StickyHeader.js' | relative_url }}"></script>
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {% if page.description and page.description != '' and page.description != nil %}
-        <meta name="description" content="{{ page.description }}" />
-        {% endif %}
-
-        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}
-        <meta name="keywords" content="{{ page.keywords | join: ", " }}" />
-        {% endif %}
+        {% if page.description and page.description != '' and page.description != nil %}<meta name="description" content="{{ page.description }}" />{% endif %}
+        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{% endif %}
+        <script src="{{ '/assets/js/components/StickyHeader.js' | relative_url }}"></script>
     </head>
     <body>
         {% include components/top/header/navigation.html %}
@@ -29,6 +21,7 @@
                 {% endif %}
 
                 <small class="postmeta">
+                    {% assign day = page.date | date: "%-d" %}
                     {% case day %}
                     {% when '1' or '21' or '31' %}
                     {{ day }}st
