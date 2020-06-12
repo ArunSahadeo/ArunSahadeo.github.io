@@ -16,9 +16,21 @@
                     {{ page.title }}
                 </h1>
 
-                {% if page.thumbnail.url and page.thumbnail.url != '' and page.thumbnail.url != nil %}
-                    <div class="featured-image" style="background-image: url({{ page.thumbnail.url | relative_url }});"{% if page.thumbnail.alt and page.thumbnail.alt != '' and page.thumbnail.alt != nil %} role="img" aria-label="{{ page.thumbnail.alt }}"{% endif %}></div>
+                {% if page.thumbnail.url != nil and page.thumbnail.url != '' and page.thumbnail.show_on_article != false %}
+                {% assign featured_image_url = page.thumbnail.url %}
+                {% elsif page.featured_image.url != nil and page.featured_image.url != '' %}
+                {% assign featured_image_url = page.featured_image.url %}
                 {% endif %}
+
+                {% if page.thumbnail.url != nil and page.thumbnail.alt != '' and page.thumbnail.show_on_article != false %}
+                {% assign featured_image_alt = page.thumbnail.alt %}
+                {% elsif page.featured_image.alt != nil and page.featured_image.alt != '' %}
+                {% assign featured_image_alt = page.featured_image.alt %}
+                {% endif %}
+
+                {% unless featured_image_url == nil or featured_image_url == '' %}
+                    <div class="featured-image" style="background-image: url({{ featured_image_url | relative_url }});"{% if featured_image_alt != nil and featured_image_alt != '' %} role="img" aria-label="{{ featured_image_alt }}"{% endif %}></div>
+                {% endunless %}
 
                 <small class="postmeta">
                     {% assign day = page.date | date: "%-d" %}

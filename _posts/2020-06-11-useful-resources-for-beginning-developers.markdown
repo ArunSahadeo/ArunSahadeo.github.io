@@ -9,6 +9,10 @@ table_of_contents: false
 thumbnail:
     url: '/assets/images/book-stack.jpg'
     alt: 'Stack of books'
+    show_on_article: false
+featured_image:
+    url: '/assets/images/laptop-coding.png'
+    alt: 'Illustration of someone coding on a laptop'
 categories: resources
 keywords:
     - resources
