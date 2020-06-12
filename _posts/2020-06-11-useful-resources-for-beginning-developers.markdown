@@ -51,6 +51,7 @@ Disclaimer: I have not had a look at any of the programming courses on this site
 
 However, given the quality of the maths and science courses I've taken on their site, I give you my word that you will not be disappointed.
 
+{:.whitney-bold}
 ### YouTube
 
 There are some great YouTube channels out there, here are a few favourites:
