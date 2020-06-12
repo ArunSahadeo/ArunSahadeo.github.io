@@ -12,6 +12,25 @@
         {% include components/top/header/navigation.html %}
         <section class="content-grid margin-top-10-rem margin-bottom-5-rem{% if page.table_of_contents %} content-grid-two-columns{% endif %}">
             <article class="bg-charcoal-grey content-article"> 
+                <small class="postmeta whitney-bold">
+                    {% assign day = page.date | date: "%-d" %}
+                    {% case day %}
+                    {% when '1' or '21' or '31' %}
+                    {{ day }}st
+                    {% when '2' or '22' %}
+                    {{ day }}nd
+                    {% when '3' or '23' %}
+                    {{ day }}rd
+                    {% else %}
+                    {{ day }}th
+                    {% endcase %}
+
+                    {{ page.date | date: "%B %Y" }}
+                </small>
+
+                <small class="postmeta whitney-bold">
+                    By <em>{{ page.author }}
+                </small>
                 <h1>
                     {{ page.title }}
                 </h1>
@@ -31,26 +50,6 @@
                 {% unless featured_image_url == nil or featured_image_url == '' %}
                     <div class="featured-image" style="background-image: url({{ featured_image_url | relative_url }});"{% if featured_image_alt != nil and featured_image_alt != '' %} role="img" aria-label="{{ featured_image_alt }}"{% endif %}></div>
                 {% endunless %}
-
-                <small class="postmeta whitney-bold">
-                    {% assign day = page.date | date: "%-d" %}
-                    {% case day %}
-                    {% when '1' or '21' or '31' %}
-                    {{ day }}st
-                    {% when '2' or '22' %}
-                    {{ day }}nd
-                    {% when '3' or '23' %}
-                    {{ day }}rd
-                    {% else %}
-                    {{ day }}th
-                    {% endcase %}
-
-                    {{ page.date | date: "%B %Y" }}
-                </small>
-
-                <small class="postmeta whitney-bold">
-                    {{ page.author }}
-                </small>
  
                 {{ content }}
 
