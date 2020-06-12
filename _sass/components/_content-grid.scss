@@ -18,7 +18,10 @@
 
     @include typography {
         text-shadow: 0 1px 3px rgba($black, .5); 
-        font-family: $whitney-book, sans-serif;
+
+        &:not([class*="whitney-"]) {
+            font-family: $whitney-book, sans-serif;
+        }
     }
 
     > article {

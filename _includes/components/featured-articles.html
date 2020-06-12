@@ -9,23 +9,23 @@
         {% endif %}
         </a>
 
-            <h4>
-                {{ article.title }}
-            </h4>
+        <h4 class="whitney-black">
+            {{ article.title }}
+        </h4>
 
-            {% if article.categories %}
-            <small class="article-categories">
-                Categories: {{ article.categories }}
-            </small>
-            {% endif %}
+        {% if article.categories %}
+        <small class="article-categories whitney-semibold">
+            Categories: {{ article.categories }}
+        </small>
+        {% endif %}
 
-            <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
+        <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
 
-            <p>
-                <a class="btn bg-summer-sky-blue" title="Read more" href="{{article.url}}">
-                    Read More
-                </a>
-            </p>
+        <p>
+            <a class="btn bg-summer-sky-blue" title="Read more" href="{{article.url}}">
+                Read More
+            </a>
+        </p>
     </article>
     {% endfor %}
 </section>
