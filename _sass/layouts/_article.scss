@@ -63,6 +63,10 @@
         }
     }
 
+    h3 {
+        font-size: 1.5rem;
+    }
+
     .featured-image {
         background-size: cover;
         background-position: center bottom -2rem;
@@ -75,10 +79,6 @@
 .postmeta {
     display: block;
     font-size: 1.3rem;
-
-    &:not(:last-of-type) {
-        margin-bottom: .5rem;
-    }
 }
 
 .article-categories {
