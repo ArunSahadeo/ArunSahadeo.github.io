@@ -64,10 +64,16 @@ Peter Fisher is a great tutor for those aiming to learn the very basics.
 Traversy Media is a great resource for those looking to quickly learn the latest and most widely adopted technologies.
 
 [w3schools]: https://www.w3schools.com/
+{: .whitney-bold}
 [codecademy]: https://www.codecademy.com/
+{: .whitney-bold}
 [dash_ga]: https://dash.generalassemb.ly/
+{: .whitney-bold}
 [mdn]: https://developer.mozilla.org/en-US/docs/Learn
+{: .whitney-bold}
 [freecodecamp]: https://www.freecodecamp.org/
+{: .whitney-bold}
 [khanacademy]: https://www.khanacademy.org/computing/computer-programming
+{: .whitney-bold}
 [peterfisher]: https://www.youtube.com/channel/UCjFs9wBGz4HlEJGUB6jzUmw
 [traversymedia]: https://www.youtube.com/user/TechGuyWeb
