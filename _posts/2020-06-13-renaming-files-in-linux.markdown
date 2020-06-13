@@ -18,11 +18,6 @@ keywords:
     - programming
     - bash
 ---
-
-<small>
-<em>(Thanks to one of the contributions on <a href="https://www.commandlinefu.com/" target="_blank">https://www.commandlinefu.com/</a>)</em>
-</small>
-
 There are many great command-line utilities I've come across for the express purpose of renaming files in Linux. Here are a few of them:
 
 {:.whitney-bold}
@@ -53,17 +48,15 @@ In my example, I replace any empty spaces with underscores in the filenames of P
 
 `rename` is probably the most robust of all the command-line utilities that can be used for renaming files, so it is definitely worth experimenting with.
 
-### 3. Sed
+### 3. cp
 
-Admittedly, this is a cop-out, as `mv` and `rename` are really the two main utilities you will end up using - I have seen people chaining multiple commands to rename files that end up using one of the two.
-
-Still, here is another example:
+My last example of a built-in shell command for renaming files, `cp` differs from the previous two commands in that it is not so much used for moving files as it is for copying them.
 
 {% highlight shell %}
-ls foo.txt | sed -e 'p;s/foo/bar/' | xargs -n2 mv
+cp oldfile newfile
 {% endhighlight %}
 
-In the example I just gave, we listed all files matching the provided filename pattern - `foo.txt`, in this case - and ordered `sed` to run a script (through the `-e` flag), ordering it to print each filename and perform the regex operation on the duplicated filenames - before passing it to `xargs`, which is specified through the `-n` flag to accept a maximum of 2 inputs that are passed to the `mv` command.
+Technically, this renames `oldfile` as `newfile`, but it does not replace `oldfile` as mentioned, instead making a copy called `newfile`.
 
 According to [command line fu](https://www.commandlinefu.com/), there are a few other commands out there for renaming files - though not necessarily built-in ones.
 
