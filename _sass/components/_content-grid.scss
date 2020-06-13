@@ -51,13 +51,9 @@
 
                     &.article-title {
                         font-size: 1.8rem;
-                        margin-bottom: 0;
 
-                        + p {
-                            img {
-                                margin-top: 3rem;
-                                margin-bottom: .5rem;
-                            }
+                        + div.featured-image {
+                            background-position: top;
                         }
                     }
                 }
