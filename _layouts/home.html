@@ -3,11 +3,11 @@
     <head>
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-
         <script src="{{ '/assets/js/components/DailyQuote.js' | relative_url }}"></script>
         <script src="{{ '/assets/js/components/StickyHeader.js' | relative_url }}"></script>
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {% if page.description and page.description != nil and page.description != '' %}<meta name="description" content="{{ page.description }}" />{% endif %} 
+        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{% endif %}
     </head>
     <body class="home">
         {% include components/top/header/navigation.html %}
