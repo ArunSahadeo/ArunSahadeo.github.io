@@ -16,8 +16,20 @@
     }
 
     article {
+        img {
+            max-width: 100%;
+
+            @media (min-width: 768px) {
+                height: 100%;
+            }
+        }
+
         h4 {
             font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
         }
     }
 }
@@ -28,6 +40,14 @@
 
 .content-article {
     p {
+        .language-plaintext {
+            background-color: $night-rider-grey;
+            font-family: $fira-code;
+            font-weight: 500;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
         a {
             &:not([class]) {
                 transition: opacity .20s ease-in-out;
@@ -67,12 +87,36 @@
         font-size: 1.5rem;
     }
 
+    ol {
+        padding-left: 20px;
+
+        li {
+            font-family: $whitney-semibold, sans-serif;
+            font-size: 1.5rem;
+        }
+    }
+
     .featured-image {
         background-size: cover;
         background-position: center bottom -2rem;
         background-repeat: no-repeat;
         min-height: 25rem;
         margin-bottom: 2.5rem;
+    }
+
+    figure {
+        &.highlight {
+            background-color: $night-rider-grey; 
+            margin-left: 0;
+            padding: 20px;
+            font-size: 1.2rem;
+            text-align: center;
+
+            code {
+                font-family: $fira-code, sans-serif;
+                font-weight: 500;
+            }
+        }
     }
 }
 

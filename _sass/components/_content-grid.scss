@@ -28,9 +28,19 @@
         @include rounded-borders(2vmin);
         padding: 0.5rem 2.5rem;
 
+        @media (max-width: 767px) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
         &.content-article {
             padding-left: 5rem;
             padding-right: 5rem;
+
+            @media (max-width: 767px) {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
             
             h1,
             .h1 {
@@ -40,6 +50,7 @@
                     font-size: 2rem; 
 
                     &.article-title {
+                        font-size: 1.8rem;
                         margin-bottom: 0;
                     }
                 }

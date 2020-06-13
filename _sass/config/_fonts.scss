@@ -1,8 +1,31 @@
+/*
+    Fira Code
+*/
+
+$fira-code: 'FiraCode';
+$fira-code-medium: 'FiraCode-Medium';
+
+/*
+    Whitney
+*/
+
 $whitney-book: 'Whitney-Book';
 $whitney-medium: 'Whitney-Medium';
 $whitney-semibold: 'Whitney-Semibold';
 $whitney-bold: 'Whitney-Bold';
 $whitney-black: 'Whitney-Black';
+
+@font-face {
+    font-family: $fira-code;
+    src: local($fira-code-medium),
+        url('#{$fontsDir}/FiraCode-Medium.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/FiraCode-Medium.woff') format('woff'),
+        url('#{$fontsDir}/FiraCode-Medium.woff2') format('woff2'),
+        url('#{$fontsDir}/FiraCode-Medium.ttf') format('truetype'),
+        url('#{$fontsDir}/FiraCode-Medium.svg#FiraCode-Medium') format('svg'); 
+    font-weight: 500;
+    font-style: normal;
+}
 
 @font-face {
     font-family: $whitney-book;
@@ -62,6 +85,10 @@ $whitney-black: 'Whitney-Black';
         url('#{$fontsDir}/Whitney-Black.svg#Whitney-Black') format('svg'); 
     font-weight: 800;
     font-style: normal;
+}
+
+.fira-code-medium {
+    font-family: #{$fira-code}-medium, sans-serif;
 }
 
 .whitney-book {

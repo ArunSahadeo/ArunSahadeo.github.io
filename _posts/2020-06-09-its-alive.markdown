@@ -8,7 +8,8 @@ thumbnail:
     url: ''
     alt: ''
     show_on_post: false
-categories: news
+categories:
+    - news
 description: >-
     My first post, outlining my intentions and direction for my blog.
 keywords:

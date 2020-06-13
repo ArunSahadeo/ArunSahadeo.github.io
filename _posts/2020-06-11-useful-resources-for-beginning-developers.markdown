@@ -13,7 +13,8 @@ thumbnail:
 featured_image:
     url: '/assets/images/laptop-coding.png'
     alt: 'Illustration of someone coding on a laptop'
-categories: resources
+categories:
+    - resources
 keywords:
     - resources
     - webdev

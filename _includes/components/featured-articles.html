@@ -15,7 +15,7 @@
 
         {% if article.categories %}
         <small class="article-categories whitney-semibold">
-            Categories: {{ article.categories }}
+            Categories: {{ article.categories | join: ', ' }}
         </small>
         {% endif %}
 
