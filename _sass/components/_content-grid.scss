@@ -127,6 +127,12 @@
             margin-top: 8rem;
             margin-bottom: 0;
         }
+
+        &.content-grid-two-columns {
+            @media (max-width: 1364px) and (max-height: 760px) {
+                margin-bottom: 10rem;
+            }
+        }
     }
 }
 
