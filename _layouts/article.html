@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>{{ page.title }}</title>
+        <title>{{ page.title }} | {{ site.title }}</title>
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {% if page.description and page.description != '' and page.description != nil %}<meta name="description" content="{{ page.description }}" />{% endif %}
