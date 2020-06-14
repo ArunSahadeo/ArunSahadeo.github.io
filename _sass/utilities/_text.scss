@@ -9,3 +9,9 @@
 .text-summer-sky-blue {
     color: $summer-sky-blue;
 }
+
+@media (max-width: 576px) {
+    .text-left-xs-down {
+        text-align: left;
+    }
+}

@@ -8,6 +8,10 @@
         @media (max-width: 576px) {
             grid-template-columns: 1fr;
             text-align: center;
+
+            &.text-left-xs-down {
+                text-align: left;
+            }
         }
     }
 

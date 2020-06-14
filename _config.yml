@@ -18,7 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Arun Sahadeo &minus; Software developer London
+title: Arun Sahadeo
+strapline: Software developer London
 email: arunjamessahadeo@gmail.com
 description: >- # this means to ignore newlines until "location:"
     Software developer and systems administrator based in Greater London

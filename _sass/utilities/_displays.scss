@@ -5,3 +5,9 @@
 .display-block {
     display: block;
 }
+
+@media (max-width: 576px) {
+    .display-block-xs-down {
+        display: block;
+    }
+}
