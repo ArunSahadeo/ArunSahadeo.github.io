@@ -1,13 +1,31 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>{{ page.title }} | {{ site.title }}</title>
+        {% assign title = page.title | append: ' | ' | append: site.title %}
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta name="title" content="{{ title }}" />
+        {% if page.description and page.description != nil and page.description != '' %}<meta name="description" content="{{ page.description }}" />{% endif %} 
+        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{% endif %}
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ site.url | append: page.url }}" />
+        <meta property="og:title" content="{{ title }}">
+        {% if page.description and page.description != nil and page.description != '' %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
+        <meta property="og:image" content="" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="{{ site.url | append: page.url }}" />
+        <meta property="twitter:title" content="{{ title }}" />
+        {% if page.description and page.description != nil and page.description != '' %}<meta property="twitter:description" content="{{ page.description }}" />{% endif %}
+        <meta property="twitter:image" content="" />
+
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
         <script src="{{ '/assets/js/components/DailyQuote.js' | relative_url }}"></script>
         <script src="{{ '/assets/js/components/StickyHeader.js' | relative_url }}"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {% if page.description and page.description != nil and page.description != '' %}<meta name="description" content="{{ page.description }}" />{% endif %} 
-        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{% endif %}
     </head>
     <body class="home">
         {% include components/top/header/navigation.html %}
