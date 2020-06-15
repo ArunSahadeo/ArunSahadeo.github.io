@@ -3,6 +3,16 @@ ul.list-star {
     font-size: 1.5rem;
     padding-left: 0;
 
+    &#toolset-1,
+    &#toolset-2,
+    &#toolset-3 {
+        @media (max-width: 576px) {
+            li {
+                padding-left: 0;
+            }
+        }
+    }
+
     li {
         position: relative;
         padding-left: 2.5rem;
@@ -13,6 +23,7 @@ ul.list-star {
             top: 5px;
             left: 0;
             margin-left: 0;
+            vertical-align: middle;
         }
 
         &:not(:last-child) {

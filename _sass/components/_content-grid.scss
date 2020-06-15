@@ -136,6 +136,15 @@
     }
 }
 
+.about {
+    .content-grid {
+        > article {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+    }
+}
+
 body:not(.home):not(.about) {
     .content-grid {
         @media (max-width: 430px) {
