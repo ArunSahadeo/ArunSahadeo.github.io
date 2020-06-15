@@ -139,8 +139,10 @@
 .about {
     .content-grid {
         > article {
-            padding-left: 5rem;
-            padding-right: 5rem;
+            @media (min-width: 577px) {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
         }
     }
 }
