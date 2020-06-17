@@ -50,6 +50,11 @@ defaults:
         path: 'assets/files/*.pdf'
     values:
         sitemap: false
+  -
+    scope:
+        path: 'google*.html'
+    values:
+        sitemap: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
