@@ -7,11 +7,17 @@
         {% else %}
         {% capture description %}Arun Sahadeo is a PHP developer and Linux sysadmin based in London.{% endcapture description %}
         {% endif %}
+        {% if page.author and page.author != nil and page.author != '' %}
+        {% assign author = page.author %}
+        {% else %}
+        {% assign author = site.author %}
+        {% endif %}
         <title>{{ title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta name="title" content="{{ title }}" />
         <meta name="description" content="{{ description }}" />
+        <meta name="author" content="{{ author }}" />
         {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{% endif %}
 
         <!-- Open Graph / Facebook -->
@@ -52,7 +58,7 @@
                 </small>
 
                 <small class="postmeta whitney-bold">
-                    By <em class="text-summer-sky-blue">{{ page.author }}</em>
+                    By <em class="text-summer-sky-blue">{{ author }}</em>
                 </small>
                 <h1 class="article-title">
                     {{ page.title }}
