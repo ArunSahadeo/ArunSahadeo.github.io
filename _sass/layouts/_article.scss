@@ -18,10 +18,6 @@
     article {
         img {
             max-width: 100%;
-
-            @media (min-width: 768px) {
-                height: 100%;
-            }
         }
 
         h4 {
