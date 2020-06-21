@@ -1,5 +1,15 @@
+/*
+    Text aligns
+*/
+
 .text-center {
     text-align: center;
+}
+
+@media (max-width: 576px) {
+    .text-left-xs-down {
+        text-align: left;
+    }
 }
 
 /*
@@ -10,8 +20,10 @@
     color: $summer-sky-blue;
 }
 
-@media (max-width: 576px) {
-    .text-left-xs-down {
-        text-align: left;
-    }
+/*
+    Line heights
+*/
+
+.line-height-1-point-2-rem {
+    line-height: 2rem;
 }

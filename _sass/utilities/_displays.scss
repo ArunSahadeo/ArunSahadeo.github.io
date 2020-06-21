@@ -6,6 +6,12 @@
     display: block;
 }
 
+@media (min-width: 992px) {
+    .display-block-lg-up {
+        display: block;
+    }
+}
+
 @media (max-width: 576px) {
     .display-block-xs-down {
         display: block;
