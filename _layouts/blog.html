@@ -52,7 +52,7 @@
                     {%- assign articlesByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | uniq -%}
                     {%- for year in articlesByYear -%}
                     <h3 class="font-size-2-point-1-rem text-summer-sky-blue">
-                        {{ year.name }}
+                        <a href="/archives/{{ year.name }}/">{{ year.name }}</a>
                     </h3>
 
                     <ul class="list-categories">
