@@ -24,7 +24,9 @@ email: arunjamessahadeo@gmail.com
 description: >- # this means to ignore newlines until "location:"
     Software developer and systems administrator based in Greater London
 location: London, UK
-company: Wirebox Consultancy
+company:
+  name: Wirebox Consultancy
+  website: https://wirebox.co.uk
 # Reading list
 reading_list:
     - Chemistry Concepts &amp; Problems&#58; A Self-Teaching Guide
