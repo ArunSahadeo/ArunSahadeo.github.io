@@ -1,0 +1,17 @@
+<div class="grid grid-3">
+{%- assign articlesByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | uniq -%}
+{%- for year in articlesByYear -%}
+    <div class="archive-item">
+        <h3 class="h1 text-summer-sky-blue">
+            <a href="/archives/{{ year.name }}/">{{ year.name }}</a>
+        </h3>
+
+        <ul class="list-categories">
+            {%- assign articlesByMonth = year.items | group_by_exp: "post", "post.date | date: '%B'" | uniq -%}
+            {%- for month in articlesByMonth -%}
+            <li><a href="/archives/{{ year.name }}/{{ month.name | date: '%m' }}">{{ month.name }}</a></li>
+            {%- endfor -%}
+        </ul>
+    </div>
+{%- endfor -%}
+</div>

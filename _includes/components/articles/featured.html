@@ -1,5 +1,6 @@
 <section class="featured-articles equalise-heights" data-targets="article > h4, article > p" data-min-width="768">
-    {%- for article in site.posts -%}
+    {%- assign articles = site.posts limit:6 -%}
+    {%- for article in articles -%}
     <article>
         <a href="{{ article.url}}">
         {%- if article.thumbnail.url and article.thumbnail.url != '' and article.thumbnail.url != nil -%}
