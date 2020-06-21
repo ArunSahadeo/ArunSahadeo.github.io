@@ -1,0 +1,40 @@
+/*
+    Top
+*/
+
+/*
+    Right
+*/
+
+.padding-right-2-point-5-rem {
+    padding-right: 2.5rem;
+}
+
+/*
+    Bottom
+*/
+
+/*
+    Left
+*/
+
+.padding-left-2-point-5-rem {
+    padding-left: 2.5rem;
+}
+
+/*
+    All
+*/
+
+/*
+    Horizontal
+*/
+
+.padding-horiz-2-point-5-rem {
+    @extend .padding-left-2-point-5-rem;
+    @extend .padding-right-2-point-5-rem;
+}
+
+/*
+    Vertical
+*/

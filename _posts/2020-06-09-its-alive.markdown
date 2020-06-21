@@ -8,8 +8,6 @@ thumbnail:
     url: ''
     alt: ''
     show_on_post: false
-categories:
-    - news
 description: >-
     My first post, outlining my intentions and direction for my blog.
 keywords:
@@ -18,6 +16,8 @@ keywords:
     - GitHub
     - Webdev
     - SEO
+categories:
+    - news
 ---
 
 ![Young Frankenstein](https://i.pinimg.com/originals/ca/dd/c9/caddc9872c2de2be42e0965cbbfc0ca9.gif "Young Frankenstein")

@@ -45,6 +45,13 @@ plugins:
 sass:
   style: compact
 
+collections:
+  category:
+    output: true
+  archives:
+    output: true
+    permalink: /:collection/:year/:month
+
 defaults:
   -
     scope:
@@ -56,6 +63,18 @@ defaults:
         path: 'google*.html'
     values:
         sitemap: false
+  -
+    scope:
+        path: ""
+        type: category
+    values:
+        layout: "category"
+  -
+    scope:
+        path: ""
+        type: archives
+    values:
+        layout: "archive"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -12,12 +12,6 @@
         {%- else -%}
         {%- assign author = site.author -%}
         {%- endif -%}
-        {%- if page.layout != nil and page.layout != '' -%}
-        {%- case page.layout -%}
-        {%- when 'category' -%}
-        {%- assign additionalBodyClasses = 'category' -%}
-        {%- endcase -%}
-        {%- endif -%}
         <title>{{ title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -42,13 +36,50 @@
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
         <script src="{{ '/assets/js/components/StickyHeader.js' | relative_url }}"></script>
     </head>
-    <body class="{{ page.title | downcase }}{% if additionalBodyClasses != nil and additionalBodyClasses != '' %} {{ additionalBodyClasses }}{% endif %}">
+    <body class="{{ page.title | downcase }}">
         {% include components/top/header/navigation.html %}
-        <section class="content-grid margin-vert-5-rem">
+        <section class="content-grid content-grid-two-columns margin-vert-5-rem">
             <article class="bg-charcoal-grey">
                 {{ content }}
             </article>
+
+            <aside>
+                <div class="bg-charcoal-grey padding-horiz-2-point-5-rem">
+                    <h3 class="h1">
+                        Articles by Month / Year
+                    </h3>
+
+                    {%- assign articlesByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | uniq -%}
+                    {%- for year in articlesByYear -%}
+                    <h3 class="font-size-2-point-1-rem text-summer-sky-blue">
+                        {{ year.name }}
+                    </h3>
+
+                    <ul class="list-categories">
+                        {%- assign articlesByMonth = year.items | group_by_exp: "post", "post.date | date: '%B'" | uniq -%}
+                        {%- for month in articlesByMonth -%}
+                        <li><a href="/archives/{{ year.name }}/{{ month.name | date: '%m' }}">{{ month.name }}</a></li>
+                        {%- endfor -%}
+                    </ul>
+                    {%- endfor -%}
+                </div>
+
+                <div class="bg-charcoal-grey padding-horiz-2-point-5-rem">
+                    <h3 class="h1">
+                        Categories
+                    </h3>
+
+                    {%- assign categories = site.categories | sort -%}
+                    {%- if categories.size > 0 -%}
+                    <ul class="list-categories">
+                    {%- for category in categories -%}
+                    <li><a href="/category/{{ category | first | strip_html }}">{{- category | first | strip_html -}}</a></li>
+                    {%- endfor -%}
+                    </ul>
+                    {%- endif -%}
+                </div>
+            </aside>
         </section>
-        {% include components/bottom/footer/navigation.html %}
+        {%- include components/bottom/footer/navigation.html -%}
     </body>
 </html>

@@ -13,11 +13,11 @@ thumbnail:
 featured_image:
     url: '/assets/images/laptop-coding.png'
     alt: 'Illustration of someone coding on a laptop'
-categories:
-    - resources
 keywords:
     - resources
     - webdev
+categories:
+    - resources
 ---
 
 It's important to realise that, as developers, our journey to learn more every day will never end.

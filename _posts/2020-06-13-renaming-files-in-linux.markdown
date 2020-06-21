@@ -10,13 +10,13 @@ thumbnail:
     url: 'assets/images/linux-penguin.png'
     alt: 'Linux penguin'
     show_on_article: false
-categories:
-    - linux
-    - productivity
 keywords:
     - linux
     - programming
     - bash
+categories:
+    - linux
+    - productivity
 ---
 There are many great command-line utilities I've come across for the express purpose of renaming files in Linux. Here are a few of them:
 
