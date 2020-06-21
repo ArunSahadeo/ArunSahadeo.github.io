@@ -1,23 +1,23 @@
 <section class="featured-articles equalise-heights" data-targets="article > h4, article > p" data-min-width="768">
-    {% for article in site.posts %}
+    {%- for article in site.posts -%}
     <article>
         <a href="{{ article.url}}">
-        {% if article.thumbnail.url and article.thumbnail.url != '' and article.thumbnail.url != nil %}
+        {%- if article.thumbnail.url and article.thumbnail.url != '' and article.thumbnail.url != nil -%}
             <img src="{{ article.thumbnail.url | relative_url }}"{% if article.thumbnail.alt and article.thumbnail.alt != '' and article.thumbnail.url != nil %} alt="{{ article.thumbnail.alt }}"{% endif %} />
-        {% else %}
+        {%- else -%}
             <img src="https://placekitten.com/300/300" alt="Cat placeholder" />
-        {% endif %}
+        {%- endif -%}
         </a>
 
         <h4 class="whitney-black">
             {{ article.title }}
         </h4>
 
-        {% if article.categories %}
+        {%- if article.categories -%}
         <small class="article-categories whitney-semibold">
             Categories: {{ article.categories | join: ', ' }}
         </small>
-        {% endif %}
+        {%- endif -%}
 
         <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
 
@@ -27,7 +27,7 @@
             </a>
         </p>
     </article>
-    {% endfor %}
+    {%- endfor -%}
 </section>
 
 <script src="{{ '/assets/js/components/EqualiseHeights.js' | relative_url }}"></script>

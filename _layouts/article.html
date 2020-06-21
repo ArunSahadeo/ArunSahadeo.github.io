@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        {% assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline %}
-        {% if page.description and page.description != nil and page.description != '' %}
-        {% assign description = page.description %}
-        {% else %}
-        {% capture description %}Arun Sahadeo is a PHP developer and Linux sysadmin based in London.{% endcapture description %}
-        {% endif %}
-        {% if page.author and page.author != nil and page.author != '' %}
-        {% assign author = page.author %}
-        {% else %}
-        {% assign author = site.author %}
-        {% endif %}
+        {%- assign title = page.title | append: ' | Blog | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
+        {%- if page.description and page.description != nil and page.description != '' -%}
+        {%- assign description = page.description -%}
+        {%- else -%}
+        {%- capture description %}Arun Sahadeo is a PHP developer and Linux sysadmin based in London.{% endcapture description -%}
+        {%- endif -%}
+        {% if page.author and page.author != nil and page.author != '' -%}
+        {%- assign author = page.author -%}
+        {%- else -%}
+        {%- assign author = site.author -%}
+        {%- endif -%}
         <title>{{ title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 

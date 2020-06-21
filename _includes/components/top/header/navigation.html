@@ -1,6 +1,6 @@
 <header>
     <div class="grid grid-3">
-        {% include components/top/header/logo.html %}
+        {%- include components/top/header/logo.html -%}
         <nav>
             <ul>
                 <li{% if page.url == '/' %} class="current"{% endif %}>
@@ -29,34 +29,34 @@
             </ul>
         </nav>
 
-        {% if site.social_accounts and site.social_accounts.size > 0 %}
+        {%- if site.social_accounts and site.social_accounts.size > 0 -%}
         <nav class="social-links">
             <ul>
-                {% if site.social_accounts.twitter.size > 0 %}
+                {%- if site.social_accounts.twitter.size > 0 -%}
                 <li>
                     <a href="{{ site.social_accounts.twitter }}" target="_blank">
                         Twitter
                     </a>
                 </li>
-                {% endif %}
+                {%- endif -%}
 
-                {% if site.social_accounts.linkedin.size > 0 %}
+                {%- if site.social_accounts.linkedin.size > 0 -%}
                 <li>
                     <a href="{{ site.social_accounts.linkedin }}" target="_blank">
                         LinkedIn
                     </a>
                 </li>
-                {% endif %}
+                {%- endif -%}
 
-                {% if site.social_accounts.github.size > 0 %}
+                {%- if site.social_accounts.github.size > 0 -%}
                 <li>
                     <a href="{{ site.social_accounts.github }}" target="_blank">
                         GitHub
                     </a>
                 </li>
-                {% endif %}
+                {%- endif -%}
             </ul>
         </nav>
-        {% endif %}
+        {%- endif -%}
     </div>
 </header>
