@@ -61,17 +61,11 @@
                     By <em class="text-summer-sky-blue">{{ author }}</em>
                 </small>
 
-                {%- if page.categories -%}
-                <small class="postmeta whitney-bold">
-                    Categories: <span class="text-summer-sky-blue">{%- for category in page.categories -%}<a href="/category/{{- category -}}">{{ category }}</a>{% if forloop.rindex > 1 %}, {% endif %}{%- endfor -%}</span>
-                </small>
-                {%- endif -%}
-
-                <h1 class="article-title">
+                <h1 class="article-title margin-bottom-2-rem">
                     {{ page.title }}
                 </h1>
 
-                <small class="display-block margin-bottom-2-rem font-size-1-point-2-rem whitney-bold">
+                <small class="display-block font-size-1-point-3-rem whitney-bold">
                     {%- assign word_count = content | number_of_words -%}
                     {%- assign average_read_total = word_count | divided_by: 200.0 | split: '.' -%}
                     {%- assign average_read_minutes = average_read_total[0] | append: ' minute(s)' -%}
@@ -80,10 +74,17 @@
                     {%- unless average_read_seconds != nil -%}
                     {%- assign average_read_time = average_read_minutes -%}
                     {%- else -%}
-                    {%- assign average_read_time = average_read_minutes | append: ' ' | append: average_read_seconds -%}
+                    {% assign average_read_time = average_read_minutes | append: ' ' | append: average_read_seconds %}
                     {%- endunless -%} 
                     <em>Average read time: <span class="text-summer-sky-blue">{{ average_read_time }}</span></em>
                 </small>
+
+                {%- if page.categories -%}
+                <small class="display-block margin-bottom-2-rem font-size-1-point-3-rem whitney-bold">
+                    <em>Categories:</em> <span class="text-summer-sky-blue">{% for category in page.categories %}<a href="/category/{{- category -}}">{{ category }}</a>{% if forloop.rindex > 1 %}, {% endif %}{% endfor %}</span>
+                </small>
+                {%- endif -%}
+
 
                 {% if page.thumbnail.url != nil and page.thumbnail.url != '' and page.thumbnail.show_on_article != false %}
                 {% assign featured_image_url = page.thumbnail.url %}
