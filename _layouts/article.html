@@ -60,6 +60,13 @@
                 <small class="postmeta whitney-bold">
                     By <em class="text-summer-sky-blue">{{ author }}</em>
                 </small>
+
+                {%- if page.categories -%}
+                <small class="postmeta whitney-bold">
+                    Categories: <span class="text-summer-sky-blue">{%- for category in page.categories -%}<a href="/category/{{- category -}}">{{ category }}</a>{% if forloop.rindex > 1 %}, {% endif %}{%- endfor -%}</span>
+                </small>
+                {%- endif -%}
+
                 <h1 class="article-title">
                     {{ page.title }}
                 </h1>
