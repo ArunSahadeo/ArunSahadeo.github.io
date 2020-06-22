@@ -9,7 +9,7 @@ thumbnail:
     alt: ''
     show_on_post: false
 description: >-
-    My first post, outlining my intentions and direction for my blog.
+    Arun's introduction to new readers, outlining his intentions for the blog and the topics he intends to cover.
 keywords:
     - Blogging
     - Jekyll
@@ -22,11 +22,15 @@ categories:
 
 ![Young Frankenstein](https://i.pinimg.com/originals/ca/dd/c9/caddc9872c2de2be42e0965cbbfc0ca9.gif "Young Frankenstein")
 
+A warm welcome to any new readers.
+
 After much deliberation and head-scratching, I have managed to churn out a passable portfolio site.
 
 I decided to build this site on [Jekyll][jekyll-site]{:target="_blank"} and host it on [GitHub Pages][github-pages]{:target="_blank"}, as the latter offers free hosting, whilst the former offers me the flexibility and scalability I need.
 
 Granted, I will probably overhaul entire sections of this site before too long, but this should suffice for now.
+
+I intend to use the blog to publish articles on a wide range of topics, ranging from Linux to my takes on developments within the software industry.
 
 Watch this space, as I intend to regularly update the site.
 

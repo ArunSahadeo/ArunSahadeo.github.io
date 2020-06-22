@@ -3,7 +3,7 @@ layout: article
 title:  "Useful resources for beginning developers"
 date:   2020-06-11 16:30:00 +0100
 description: >-
-    My recommendations for beginner friendly resources.
+    A short list of online learning resources for beginning developers.
 author: Arun Sahadeo
 table_of_contents: false
 thumbnail:

@@ -3,7 +3,7 @@ layout: article
 title:  "Renaming files in Linux"
 date:   2020-06-13 16:30:00 +0100
 description: >-
-    Some of the methods I've developed for renaming files in Linux.
+    A list of command-line tools for renaming files in Linux.
 author: Arun Sahadeo
 table_of_contents: false
 thumbnail:
