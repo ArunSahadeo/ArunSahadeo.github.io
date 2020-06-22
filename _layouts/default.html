@@ -44,11 +44,16 @@
     </head>
     <body class="{{ page.title | downcase }}{% if additionalBodyClasses != nil and additionalBodyClasses != '' %} {{ additionalBodyClasses }}{% endif %}">
         {% include components/top/header/navigation.html %}
-        <section class="content-grid margin-vert-5-rem">
+        <section class="content-grid {% unless content.size < 400 %}margin-vert-5-rem{% else %}margin-vert-10-rem{% endunless %}">
             <article class="bg-charcoal-grey">
                 {{ content }}
             </article>
         </section>
-        {% include components/bottom/footer/navigation.html %}
+        {%- unless content.size >= 400 -%}
+        {%- assign sticky_footer = true -%}
+        {%- else -%}
+        {%- assign sticky_footer = false -%}
+        {%- endunless -%}
+        {% include components/bottom/footer/navigation.html sticky_footer=sticky_footer %}
     </body>
 </html>

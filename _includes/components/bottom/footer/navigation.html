@@ -1,4 +1,9 @@
-<footer>
+{%- unless include.sticky_footer -%}
+{%- assign sticky_footer = false -%}
+{%- else -%}
+{%- assign sticky_footer = include.sticky_footer -%}
+{%- endunless -%}
+<footer{% if sticky_footer %} class="position-absolute bottom-0"{% endif %}>
     <small class="whitney-semibold font-size-point-8-rem-sm-down font-size-1-rem">
         &copy; {{ 'now' | date: "%Y" }}{% if site.title %} {{ site.title | replace: '&minus;', '-' }}{% endif %} - All Rights Reserved
     </small>

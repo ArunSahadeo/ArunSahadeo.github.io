@@ -99,6 +99,11 @@
             </aside>
             {% endif %}
         </section>
-        {% include components/bottom/footer/navigation.html %}
+        {%- unless content.size >= 400 -%}
+        {%- assign sticky_footer = true -%}
+        {%- else -%}
+        {%- assign sticky_footer = false -%}
+        {%- endunless -%}
+        {% include components/bottom/footer/navigation.html sticky_footer=sticky_footer %}
     </body>
 </html>
