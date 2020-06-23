@@ -14,11 +14,19 @@
             {{ article.title }}
         </h4>
 
-        {%- if article.categories -%}
-        <small class="article-categories whitney-semibold">
-            Categories: {{ article.categories | join: ', ' }}
+        <small class="article-categories whitney-bold">
+            {%- assign word_count = content | number_of_words -%}
+            {%- assign average_read_total = word_count | divided_by: 200.0 | split: '.' -%}
+            {%- assign average_read_minutes = average_read_total[0] | append: ' minute(s)' -%}
+            {%- assign average_read_fractional = average_read_total[1] | prepend: '0.' -%}
+            {%- assign average_read_seconds = average_read_fractional | times: 0.60 | round: 2 | replace: '0.', '' | abs | append: ' second(s)' -%}
+            {%- unless average_read_seconds != nil -%}
+            {%- assign average_read_time = average_read_minutes -%}
+            {%- else -%}
+            {% assign average_read_time = average_read_minutes | append: ' ' | append: average_read_seconds %}
+            {%- endunless -%} 
+            <em>Average read time: <span class="text-summer-sky-blue">{{ average_read_time }}</span></em>
         </small>
-        {%- endif -%}
 
         <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
 
