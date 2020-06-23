@@ -1,6 +1,4 @@
-/*
-    Top
-*/
+// Top
 
 .margin-top-1-rem {
     margin-top: 1rem;
@@ -22,13 +20,9 @@
     margin-top: 25%;
 }
 
-/*
-    Right
-*/
+// Right
 
-/*
-    Bottom
-*/
+// Bottom
 
 .margin-bottom-1-rem {
     margin-bottom: 1rem;
@@ -50,17 +44,11 @@
     margin-bottom: 10rem;
 }
 
-/*
-    Left
-*/
+// Left
 
-/*
-    Horizontal
-*/
+// Horizontal
 
-/*
-    Vertical
-*/
+// Vertical
 
 .margin-vert-3-rem {
     @extend .margin-top-3-rem;
@@ -77,6 +65,4 @@
     @extend .margin-bottom-10-rem;
 }
 
-/*
-    All
-*/
+// All
