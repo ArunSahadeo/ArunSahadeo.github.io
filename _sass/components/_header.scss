@@ -4,14 +4,11 @@ header {
     left: 0;
     width: 100%;
     z-index: 10;
+    background-color: $nero-black;
 
     @media (min-width: 768px) {
         padding-top: 1rem;
         padding-bottom: 1rem;
-    }
-
-    &:not([class*="bg-"]):not(.scrolled) {
-        @extend .bg-nero-black;
     }
 
     &.scrolled {
