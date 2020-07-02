@@ -34,6 +34,10 @@ class EqualiseHeights {
             });
 
             targets.forEach(target => {
+                if (target.classList.contains('do-not-equalise')) {
+                    return;
+                }
+
                 target.style.height = new String(maxHeights[target.nodeName.toLowerCase()] + 'px');
             });
         });

@@ -1,6 +1,12 @@
 <section class="featured-articles equalise-heights" data-targets="article > h4, article > p" data-min-width="768">
     {%- assign articles = site.posts limit:6 -%}
+
     {%- for article in articles -%}
+    {%- if forloop.last and forloop.index | modulo: 3 === 1 -%}
+    {%- assign aloneOnRow = true -%}
+    {%- else -%}
+    {%- assign aloneOnRow = false -%}
+    {%- endif -%}
     <article>
         <a href="{{ article.url}}">
         {%- if article.thumbnail.url and article.thumbnail.url != '' and article.thumbnail.url != nil -%}
@@ -10,7 +16,7 @@
         {%- endif -%}
         </a>
 
-        <h4 class="whitney-black">
+        <h4 class="whitney-black{% if aloneOnRow %} do-not-equalise{% endif %}">
             {{ article.title }}
         </h4>
 
@@ -28,9 +34,9 @@
             <em>Average read time: <span class="text-summer-sky-blue">{{ average_read_time }}</span></em>
         </small>
 
-        <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
+        <p{% if aloneOnRow %} class="do-not-equalise"{% endif %}>{{ article.content | strip_html | truncatewords: 15 }}</p>
 
-        <p>
+        <p class="do-not-equalise">
             <a class="btn bg-summer-sky-blue" title="Read more" href="{{article.url}}">
                 Read More
             </a>

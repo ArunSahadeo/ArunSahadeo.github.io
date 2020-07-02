@@ -177,11 +177,6 @@ body.blog {
                 &:last-of-type {
                     margin-top: 0;
                     margin-bottom: 0;
-                    height: auto !important;
-                }
-
-                @media (min-width: 1200px) {
-                    //max-width: 95%;
                 }
             }
         }
