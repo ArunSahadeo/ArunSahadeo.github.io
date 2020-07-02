@@ -2,8 +2,10 @@
 
 .featured-articles {
     display: grid;
-    grid-gap: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 4rem;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
 
     @media (max-width: 767px) {
         grid-template-columns: 3fr;

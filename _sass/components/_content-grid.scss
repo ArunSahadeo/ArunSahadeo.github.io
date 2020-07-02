@@ -165,12 +165,24 @@ body:not(.home):not(.about) {
 body.blog {
     .featured-articles {
         article {
-            @media (min-width: 1200px) {
-                max-width: 85%;
-            }
-
             p {
                 font-size: 1.2rem;
+
+                &:not(:last-of-type) {
+                    @media (min-width: 768px) {
+                        max-width: 95%;
+                    }
+                }
+
+                &:last-of-type {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    height: auto !important;
+                }
+
+                @media (min-width: 1200px) {
+                    //max-width: 95%;
+                }
             }
         }
     }
