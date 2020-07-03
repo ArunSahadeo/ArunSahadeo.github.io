@@ -111,15 +111,17 @@
                 </p>
             </article>
 
-            {% if page.table_of_contents %}
-            <aside>
+            {%- if page.table_of_contents -%}
+            <aside class="table-of-contents">
                 <div class="bg-charcoal-grey">
-                    <h3>
+                    <h3 class="font-size-2-rem">
                         Table of Contents
                     </h3>
+
+                    {%- include components/articles/toc.html -%}
                 </div>
             </aside>
-            {% endif %}
+            {%- endif -%}
         </section>
         {% include components/bottom/footer/navigation.html %}
     </body>
