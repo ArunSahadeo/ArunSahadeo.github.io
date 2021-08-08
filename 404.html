@@ -1,0 +1,53 @@
+---
+title: 'Page Not Found'
+layout: default
+bodyClass: page-404
+sitemap: false
+---
+<div class="columns-block min-height-30-rem">
+  <div class="notification-block position-centred">
+    <h1>
+      Page not found
+    </h1>
+
+    <p>
+      I am sorry, but the page you were looking for could not be found.
+    </p>
+
+    <p>
+      Perhaps you would like to return to the <a class="colour-inherit font-weight-bold no-underline" href="/">homepage</a> instead?
+    </p>
+
+    <p>
+      Otherwise, if you would like to get in touch with me, please refer to my following social links:
+    </p>
+
+    {% if site.email != null and site.email != '' or site.linkedin_username != null and site.linkedin_username != '' or site.github_username != null and site.github_username != '' %}
+    <ul class="social-links social-links-wrapper">
+      {% unless site.email == null or site.email == '' %}
+      <li>
+        <a href="mailto:{{ site.email }}">
+          <i class="icon-email"></i>
+        </a>
+      </li>
+      {% endunless %}
+
+      {% unless site.linkedin_username == null or site.linkedin_username == '' %}
+      <li>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
+          <i class="icon-linkedin-squared"></i>
+        </a>
+      </li>
+      {% endunless %}
+
+      {% unless site.github_username == null or site.github_username == '' %}
+      <li>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank">
+          <i class="icon-github-circled"></i>
+        </a>
+      </li>
+      {% endunless %}
+    </ul>
+  {% endif %}
+  </div>
+</div>

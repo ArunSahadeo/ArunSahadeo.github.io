@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>{{ page.title | append: ' | ' | append: site.strapline }}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ', ' }}" />{% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}" />
+    </head>
+
+    <body{% if page.bodyClass != null and page.bodyClass != '' %} class="{{ page.bodyClass }}"{% endif %}>
+      {% include header.html %}
+      <main>
+          {{ content }}
+      </main>
+      {% include footer.html %}
+    </body>
+</html>

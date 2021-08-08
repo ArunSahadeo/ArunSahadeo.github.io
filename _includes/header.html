@@ -1,0 +1,37 @@
+<header>
+  {% unless site.title == null or site.title == '' %}
+  <h1 class="site-header">
+    <a href="/">
+      {{ site.title }}
+    </a>
+  </h1>
+  {% endunless %}
+
+  {% unless site.strapline == null or site.strapline == '' %}
+  <p class="site-description">
+    {{ site.strapline }}
+  </p>
+  {% endunless %}
+</header>
+
+<nav>
+  <ul>
+    <li>
+        <a href="/">
+          About
+        </a>
+    </li>
+
+    <li>
+        <a href="/projects">
+          Projects
+        </a>
+    </li>
+
+    <li>
+        <a href="/blog">
+          Blog
+        </a>
+    </li>
+  </ul>
+</nav>

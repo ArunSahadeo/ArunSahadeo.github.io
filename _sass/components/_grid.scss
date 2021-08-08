@@ -1,0 +1,28 @@
+.columns-block {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 568px) {
+    max-width: 95%;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 65%;
+  }
+
+  @media (min-width: 1600px) {
+    max-width: 60%;
+  }
+}
+
+.half-col {
+  display: block;
+  vertical-align: top;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  @media (min-width: 768px) {
+    display: table-cell;
+  }
+}

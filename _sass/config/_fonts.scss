@@ -1,0 +1,161 @@
+$yrsa: 'Yrsa';
+
+/*
+    Yrsa Light
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Light'),
+        url('#{$fontsDir}/#{$yrsa}-Light.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Light.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Light.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Light.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Light.svg#Yrsa-Light') format('svg'); 
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*
+    Yrsa LightItalic
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-LightItalic'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.svg#Yrsa-LightItalic') format('svg'); 
+    font-weight: 300;
+    font-style: italic;
+}
+
+/*
+    Yrsa Regular
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Regular'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.svg#Yrsa-Regular') format('svg'); 
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*
+    Yrsa Italic
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Italic'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.svg#Yrsa-Italic') format('svg'); 
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*
+    Yrsa Medium
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Medium'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.svg#Yrsa-Medium') format('svg'); 
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*
+    Yrsa MediumItalic
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-MediumItalic'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.svg#Yrsa-MediumItalic') format('svg'); 
+    font-weight: 500;
+    font-style: italic;
+}
+
+/*
+    Yrsa SemiBold
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-SemiBold'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.svg#Yrsa-SemiBold') format('svg'); 
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*
+    Yrsa SemiBoldItalic
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-SemiBoldItalic'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.svg#Yrsa-SemiBoldItalic') format('svg'); 
+    font-weight: 600;
+    font-style: italic;
+}
+
+/*
+    Yrsa Bold
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Bold'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.svg#Yrsa-Bold') format('svg'); 
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*
+    Yrsa BoldItalic
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-BoldItalic'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.svg#Yrsa-BoldItalic') format('svg'); 
+    font-weight: 700;
+    font-style: italic;
+}

@@ -1,0 +1,136 @@
+---
+layout: default
+title: About Me
+description: I am a software developer and sysadmin from the UK, experienced in PHP, WordPress and Laravel. 
+keywords:
+    - PHP developer UK
+    - Sysadmin UK
+    - WordPress
+    - Laravel
+---
+{%- assign resume = site.static_files | where_exp: 'file', 'file.name == "linkedin-cv.pdf"' | first -%}
+<div class="columns-block">
+  <div class="half-col">
+    <h2>
+      About me
+    </h2>
+
+    <p>
+      Hi there, and welcome to my site. I hope you find what you&rsquo;re looking for.
+    </p>
+
+    <p>
+      I am a full-stack web developer and sysadmin from the UK, with experience working for a variety of blue chip and SME clients on applications including multilingual technical documentation sites, booking / eCommerce platforms and lead integrations for both out-of-the-box and bespoke CRM systems, to name a few.
+    </p>
+
+    <h2 class="font-size-2-rem">
+        Certificates
+    </h2>
+
+    <ul class="courses-list">
+      <li>
+        <i class="icon-graduation-cap"></i>
+
+        <p class="course">
+          NCFE Level 2 Certificate in Understanding Data Protection and Security
+        </p>
+
+        <p class="institution">
+          North Warwickshire and South Leicestershire College
+        </p>
+      </li>
+
+      <li>
+        <i class="icon-graduation-cap"></i>
+
+        <p class="course">
+          BTEC Level 3 Extended Diploma for ICT Practitioners
+        </p>
+
+        <p class="institution">
+          3AAA Academy
+        </p>
+      </li>
+    </ul>
+
+    <h2 class="font-size-2-rem">
+        Toolkit
+    </h2>
+
+    <ul>
+        <li>
+          HTML / CSS / JavaScript / jQuery
+        </li>
+
+        <li>
+          MySQL / PostgreSQL
+        </li>
+
+        <li>
+          PHP / Ruby / Python
+        </li>
+
+        <li>
+          WordPress / WooCommerce / Laravel
+        </li>
+
+        <li>
+          Apache / NGINX
+        </li>
+
+        <li>
+          Ubuntu / centOS
+        </li>
+    </ul>
+  </div>
+
+  <div class="half-col">
+    <img class="img-centered margin-bottom-1-rem" src="{{ '/assets/img/arun.jpg' | relative_url }}" />  
+
+    {% if site.email != null and site.email != '' or site.linkedin_username != null and site.linkedin_username != '' or site.github_username != null and site.github_username != '' %}
+    <ul class="social-links">
+      {% unless site.email == null or site.email == '' %}
+      <li>
+        <a href="mailto:{{ site.email }}">
+          <i class="icon-email"></i>
+        </a>
+      </li>
+      {% endunless %}
+
+      {% unless site.linkedin_username == null or site.linkedin_username == '' %}
+      <li>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
+          <i class="icon-linkedin-squared"></i>
+        </a>
+      </li>
+      {% endunless %}
+
+      {% unless site.github_username == null or site.github_username == '' %}
+      <li>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank">
+          <i class="icon-github-circled"></i>
+        </a>
+      </li>
+      {% endunless %}
+    </ul>
+    {% endif %}
+
+    {% unless site.location == null or site.location == '' %}
+    <h4 class="text-center margin-top-1-rem margin-bottom-0">
+      Current Location
+    </h4>
+
+    <p class="text-center">
+      {{ site.location }}
+    </p>
+    {% endunless %}
+
+    {% unless resume == null %}
+    <p class="text-center">
+        <a class="no-underline" href="{{ resume.path }}" target="_blank">
+            Download my CV <i class="icon-download"></i>
+        </a>
+    </p>
+    {% endunless %}
+  </div>
+</div>
