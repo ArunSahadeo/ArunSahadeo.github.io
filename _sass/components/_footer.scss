@@ -1,17 +1,10 @@
 footer {
-    background-color: rgba($summer-sky-blue, .75);
-    color: $white;
-    width: 100%;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    text-align: center;
-}
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
-.error-page {
-    footer {
-        @media (min-width: 1440px) {
-            position: absolute;
-            bottom: 0;
-        }
-    }
+  p {
+    text-align: center;
+    font-size: 21px;
+    margin: 0;
+  }
 }

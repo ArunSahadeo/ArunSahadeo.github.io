@@ -1,19 +1,23 @@
-@mixin typography {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul > li {
-        @content;
-    }
+@mixin headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
 }
 
-@mixin rounded-borders ($percentage: 1.5%) {
-    border-top-left-radius: $percentage;
-    border-top-right-radius: $percentage;
-    border-bottom-left-radius: $percentage;
-    border-bottom-right-radius: $percentage;
+@mixin typography {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  p {
+    @content;
+  }
 }

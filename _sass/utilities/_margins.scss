@@ -1,68 +1,19 @@
 // Top
 
 .margin-top-1-rem {
-    margin-top: 1rem;
-}
-
-.margin-top-3-rem {
-    margin-top: 3rem;
-}
-
-.margin-top-5-rem {
-    margin-top: 5rem;
-}
-
-.margin-top-10-rem {
-    margin-top: 10rem;
-}
-
-.margin-top-25-pc {
-    margin-top: 25%;
+  margin-top: 1rem;
 }
 
 // Right
 
 // Bottom
 
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
 .margin-bottom-1-rem {
-    margin-bottom: 1rem;
-}
-
-.margin-bottom-2-rem {
-    margin-bottom: 2rem;
-}
-
-.margin-bottom-3-rem {
-    margin-bottom: 3rem;
-}
-
-.margin-bottom-5-rem {
-    margin-bottom: 5rem;
-}
-
-.margin-bottom-10-rem {
-    margin-bottom: 10rem;
+  margin-bottom: 1rem;
 }
 
 // Left
-
-// Horizontal
-
-// Vertical
-
-.margin-vert-3-rem {
-    @extend .margin-top-3-rem;
-    @extend .margin-bottom-3-rem;
-}
-
-.margin-vert-5-rem {
-    @extend .margin-top-5-rem;
-    @extend .margin-bottom-5-rem;
-}
-
-.margin-vert-10-rem {
-    @extend .margin-top-10-rem;
-    @extend .margin-bottom-10-rem;
-}
-
-// All

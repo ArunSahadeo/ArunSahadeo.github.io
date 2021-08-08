@@ -1,59 +1,19 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        {%- assign title = page.title | append: ' | ' | append: site.title | append: ' &minus; ' | append: site.strapline -%}
-        {%- if page.description and page.description != nil and page.description != '' -%}
-        {%- assign description = page.description -%}
-        {%- else -%}
-        {%- capture description %}Arun Sahadeo is a PHP developer and Linux sysadmin based in London.{% endcapture description -%}
-        {%- endif -%}
-        {% if page.author and page.author != nil and page.author != '' -%}
-        {%- assign author = page.author -%}
-        {%- else -%}
-        {%- assign author = site.author -%}
-        {%- endif -%}
-        {%- if page.layout != nil and page.layout != '' -%}
-        {%- case page.layout -%}
-        {%- when 'category' -%}
-        {%- assign additionalBodyClasses = 'category' -%}
-        {%- endcase -%}
-        {%- endif -%}
-        <title>{{ title }}</title>
+        <title>{{ page.title | append: ' | ' | append: site.strapline }}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <meta name="title" content="{{ title }}" />
-        <meta name="description" content="{{ description }}" />
-        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ", " }}" />{% endif %}
-
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ site.url | append: page.url }}" />
-        <meta property="og:title" content="{{ title }}">
-        <meta property="og:description" content="{{ description }}" />
-        <meta property="og:image" content="{{ '/assets/images/title-card-facebook.jpg' | relative_url }}" />
-
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="{{ site.url | append: page.url }}" />
-        <meta property="twitter:title" content="{{ title }}" />
-        <meta property="twitter:description" content="{{ description }}" />
-        <meta property="twitter:image" content="{{ '/assets/images/title-card-twitter.jpg' | relative_url }}" />
-
-        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-        <script src="{{ '/assets/js/components/StickyHeader.js' | relative_url }}"></script>
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ', ' }}" />{% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}" />
     </head>
-    <body class="{{ page.title | downcase }}{% if additionalBodyClasses != nil and additionalBodyClasses != '' %} {{ additionalBodyClasses }}{% endif %}">
-        {% include components/top/header/navigation.html %}
-        <section class="content-grid {% unless content.size < 400 %}margin-vert-5-rem{% else %}margin-vert-10-rem{% endunless %}">
-            <article class="bg-charcoal-grey">
-                {{ content }}
-            </article>
-        </section>
-        {%- unless content.size >= 400 -%}
-        {%- assign sticky_footer = true -%}
-        {%- else -%}
-        {%- assign sticky_footer = false -%}
-        {%- endunless -%}
-        {% include components/bottom/footer/navigation.html sticky_footer=sticky_footer %}
+
+    <body{% if page.bodyClass != null and page.bodyClass != '' %} class="{{ page.bodyClass }}"{% endif %}>
+      {% include header.html %}
+      <main>
+          {{ content }}
+      </main>
+      {% include footer.html %}
     </body>
 </html>

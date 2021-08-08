@@ -19,64 +19,22 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Arun Sahadeo
-strapline: Software developer London
+strapline: Software engineer, sysadmin, tinkerer
+description: >- # this means to ignore newlines until "baseurl:"
+  Software developer and sysadmin from the UK, experienced in PHP, WordPress and Laravel
 email: arunjamessahadeo@gmail.com
-description: >- # this means to ignore newlines until "location:"
-    Software developer and systems administrator based in Greater London
-location: London, UK
-company:
-  name: Wirebox Consultancy
-  website: https://wirebox.co.uk
-# Reading list
-reading_list:
-    - Chemistry Concepts &amp; Problems&#58; A Self-Teaching Guide
-    - Basic Physics&#58; A Self-Teaching Guide
-# Social accounts
-social_accounts:
-    twitter: ''
-    linkedin: 'https://www.linkedin.com/in/arun-sahadeo-00836883/'
-    github: 'https://github.com/ArunSahadeo'
-# Permalink settings
-permalink: /blog/:title
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  ArunSahadeo
+linkedin_username: arun-sahadeo-00836883
+
+# Location settings
+location: London, England
+
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-redirect-from
-sass:
-  style: compact
-
-collections:
-  category:
-    output: true
-  archives:
-    output: true
-    permalink: /:collection/:year/:month
-
-defaults:
-  -
-    scope:
-        path: 'assets/files/*.pdf'
-    values:
-        sitemap: false
-  -
-    scope:
-        path: 'google*.html'
-    values:
-        sitemap: false
-  -
-    scope:
-        path: ""
-        type: category
-    values:
-        layout: "category"
-  -
-    scope:
-        path: ""
-        type: archives
-    values:
-        layout: "archive"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

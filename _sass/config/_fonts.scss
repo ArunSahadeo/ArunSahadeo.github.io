@@ -1,108 +1,161 @@
-// Fira Code
+$yrsa: 'Yrsa';
 
-$fira-code: 'FiraCode';
-$fira-code-medium: 'FiraCode-Medium';
-
-// Whitney
-
-$whitney-book: 'Whitney-Book';
-$whitney-medium: 'Whitney-Medium';
-$whitney-semibold: 'Whitney-Semibold';
-$whitney-bold: 'Whitney-Bold';
-$whitney-black: 'Whitney-Black';
+/*
+    Yrsa Light
+*/
 
 @font-face {
-    font-family: $fira-code;
-    src: local($fira-code-medium),
-        url('#{$fontsDir}/FiraCode-Medium.eot?#iefix') format('embedded-opentype'),
-        url('#{$fontsDir}/FiraCode-Medium.woff') format('woff'),
-        url('#{$fontsDir}/FiraCode-Medium.woff2') format('woff2'),
-        url('#{$fontsDir}/FiraCode-Medium.ttf') format('truetype'),
-        url('#{$fontsDir}/FiraCode-Medium.svg#FiraCode-Medium') format('svg'); 
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: $whitney-book;
-    src: local($whitney-book),
-        url('#{$fontsDir}/Whitney-Book.eot?#iefix') format('embedded-opentype'),
-        url('#{$fontsDir}/Whitney-Book.woff') format('woff'),
-        url('#{$fontsDir}/Whitney-Book.woff2') format('woff2'),
-        url('#{$fontsDir}/Whitney-Book.ttf') format('truetype'),
-        url('#{$fontsDir}/Whitney-Book.svg#Whitney-Book') format('svg'); 
+    font-family: $yrsa;
+    src: local('Yrsa-Light'),
+        url('#{$fontsDir}/#{$yrsa}-Light.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Light.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Light.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Light.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Light.svg#Yrsa-Light') format('svg'); 
     font-weight: 300;
     font-style: normal;
 }
 
+/*
+    Yrsa LightItalic
+*/
+
 @font-face {
-    font-family: $whitney-medium;
-    src: local($whitney-medium),
-        url('#{$fontsDir}/Whitney-Medium.eot?#iefix') format('embedded-opentype'),
-        url('#{$fontsDir}/Whitney-Medium.woff') format('woff'),
-        url('#{$fontsDir}/Whitney-Medium.woff2') format('woff2'),
-        url('#{$fontsDir}/Whitney-Medium.ttf') format('truetype'),
-        url('#{$fontsDir}/Whitney-Medium.svg#Whitney-Medium') format('svg'); 
+    font-family: $yrsa;
+    src: local('Yrsa-LightItalic'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-LightItalic.svg#Yrsa-LightItalic') format('svg'); 
+    font-weight: 300;
+    font-style: italic;
+}
+
+/*
+    Yrsa Regular
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Regular'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Regular.svg#Yrsa-Regular') format('svg'); 
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*
+    Yrsa Italic
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Italic'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Italic.svg#Yrsa-Italic') format('svg'); 
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*
+    Yrsa Medium
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Medium'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Medium.svg#Yrsa-Medium') format('svg'); 
     font-weight: 500;
     font-style: normal;
 }
 
+/*
+    Yrsa MediumItalic
+*/
+
 @font-face {
-    font-family: $whitney-semibold;
-    src: local($whitney-semibold),
-        url('#{$fontsDir}/Whitney-Semibold.eot?#iefix') format('embedded-opentype'),
-        url('#{$fontsDir}/Whitney-Semibold.woff') format('woff'),
-        url('#{$fontsDir}/Whitney-Semibold.woff2') format('woff2'),
-        url('#{$fontsDir}/Whitney-Semibold.ttf') format('truetype'),
-        url('#{$fontsDir}/Whitney-Semibold.svg#Whitney-Semibold') format('svg'); 
+    font-family: $yrsa;
+    src: local('Yrsa-MediumItalic'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-MediumItalic.svg#Yrsa-MediumItalic') format('svg'); 
+    font-weight: 500;
+    font-style: italic;
+}
+
+/*
+    Yrsa SemiBold
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-SemiBold'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBold.svg#Yrsa-SemiBold') format('svg'); 
     font-weight: 600;
     font-style: normal;
 }
 
+/*
+    Yrsa SemiBoldItalic
+*/
+
 @font-face {
-    font-family: $whitney-bold;
-    src: local($whitney-bold),
-        url('#{$fontsDir}/Whitney-Bold.eot?#iefix') format('embedded-opentype'),
-        url('#{$fontsDir}/Whitney-Bold.woff') format('woff'),
-        url('#{$fontsDir}/Whitney-Bold.woff2') format('woff2'),
-        url('#{$fontsDir}/Whitney-Bold.ttf') format('truetype'),
-        url('#{$fontsDir}/Whitney-Bold.svg#Whitney-Bold') format('svg'); 
+    font-family: $yrsa;
+    src: local('Yrsa-SemiBoldItalic'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.svg#Yrsa-SemiBoldItalic') format('svg'); 
+    font-weight: 600;
+    font-style: italic;
+}
+
+/*
+    Yrsa Bold
+*/
+
+@font-face {
+    font-family: $yrsa;
+    src: local('Yrsa-Bold'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-Bold.svg#Yrsa-Bold') format('svg'); 
     font-weight: 700;
     font-style: normal;
 }
 
+/*
+    Yrsa BoldItalic
+*/
+
 @font-face {
-    font-family: $whitney-black;
-    src: local($whitney-black),
-        url('#{$fontsDir}/Whitney-Black.eot?#iefix') format('embedded-opentype'),
-        url('#{$fontsDir}/Whitney-Black.woff') format('woff'),
-        url('#{$fontsDir}/Whitney-Black.woff2') format('woff2'),
-        url('#{$fontsDir}/Whitney-Black.ttf') format('truetype'),
-        url('#{$fontsDir}/Whitney-Black.svg#Whitney-Black') format('svg'); 
-    font-weight: 800;
-    font-style: normal;
-}
-
-.fira-code-medium {
-    font-family: #{$fira-code}-medium, sans-serif;
-}
-
-.whitney-book {
-    font-family: $whitney-book, sans-serif;
-}
-
-.whitney-medium {
-    font-family: $whitney-medium, sans-serif;
-}
-
-.whitney-semibold {
-    font-family: $whitney-semibold, sans-serif;
-}
-
-.whitney-bold {
-    font-family: $whitney-bold, sans-serif;
-}
-
-.whitney-black {
-    font-family: $whitney-black, sans-serif;
+    font-family: $yrsa;
+    src: local('Yrsa-BoldItalic'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.woff') format('woff'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.woff2') format('woff2'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.ttf') format('truetype'),
+        url('#{$fontsDir}/#{$yrsa}-BoldItalic.svg#Yrsa-BoldItalic') format('svg'); 
+    font-weight: 700;
+    font-style: italic;
 }
