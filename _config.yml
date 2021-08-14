@@ -31,6 +31,9 @@ linkedin_username: arun-sahadeo-00836883
 # Location settings
 location: London, England
 
+# Permalink settings
+permalink: /blog/:title
+
 # Build settings
 theme: minima
 plugins:

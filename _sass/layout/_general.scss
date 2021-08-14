@@ -12,21 +12,21 @@ body {
 body {
   &:not(.page-404) {
     > main {
-      min-height: 92.1vh;
+      min-height: 66.8vh;
+
+      @media (max-width: 991px) {
+        min-height: 75vh;
+      }
+
+      @media (max-width: 767px) {
+        min-height: 65vh;
+      }
     }
   }
 
   > main {
     margin-top: 3rem;
     display: block;
-
-    @include headings {
-      &:first-child {
-          font-size: 34px;
-          margin-top: 0;
-          margin-bottom: 1.25rem;
-      }
-    }
 
     h4 {
       font-size: 24px;
@@ -40,6 +40,18 @@ body {
 
       @media (max-width: 567px) {
         font-size: 20px;
+      }
+    }
+  }
+
+  &:not(.article-page) {
+    > main {
+      @include headings {
+        &:first-child {
+            font-size: 34px;
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+        }
       }
     }
   }

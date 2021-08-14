@@ -1,0 +1,48 @@
+{%- assign word_count = content | number_of_words -%}
+{%- assign average_read_total = word_count | divided_by: 200.0 | split: '.' -%}
+{%- assign average_read_minutes = average_read_total[0] | append: ' minute(s)' -%}
+{%- assign average_read_fractional = average_read_total[1] | prepend: '0.' -%}
+{%- assign average_read_seconds = average_read_fractional | times: 0.60 | round: 2 | replace: '0.', '' | abs | append: ' second(s)' -%}
+
+{%- if average_read_seconds != nil -%}
+  {% assign average_read_time = average_read_minutes | append: ' ' | append: average_read_seconds %}
+{%- else -%}
+  {%- assign average_read_time = average_read_minutes -%}
+{%- endif -%}
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>{{ page.title | append: ' | ' | append: site.strapline }}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+        {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ', ' }}" />{% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}" />
+    </head>
+
+    <body class="article-page{% if page.bodyClass != null and page.bodyClass != '' %} {{ page.bodyClass }}{% endif %}">
+      {% include header.html %}
+      <main>
+          <div class="columns-block">
+            {% unless page.title == nil %}
+            <h1 class="post-heading">{{ page.title }}</h1>
+            {% endunless %}
+
+            <div class="text-center margin-bottom-2-rem">
+              {% unless average_read_time == nil or average_read_time.size < 1 %}
+              <i class="icon-clock"></i>
+              <p class="article-read-time-text">{{ average_read_time }}</p>
+              {% endunless %}
+
+              <i class="icon-calendar"></i>
+              <p class="article-date-text">{{ page.date | date: "%d %B %Y" }}</p>
+            </div>
+          </div>
+
+          <article>
+            {{ content }}
+          </article>
+      </main>
+      {% include footer.html %}
+    </body>
+</html>

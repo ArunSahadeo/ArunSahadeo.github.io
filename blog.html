@@ -1,0 +1,52 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: My thoughts and insights into various topics, primarily development focussed.
+---
+{%- assign posts = site.posts | limit: 3 -%}
+<div class="columns-block">
+  <div class="col">
+    <h2>
+      My thoughts and insights
+    </h2>
+
+    <p>
+      Below you will find my burgeoning collection of eclectic thoughts and insights into a variety of topics, most of which are focused on development.
+    </p>
+
+    <p>
+      Do be nice &#128540
+    </p>
+  </div>
+</div>
+
+{% unless posts.size < 1 %}
+<div class="three-columns-block">
+  {% for post in posts %}
+  <div class="column featured-post">
+    {% unless post.featured_image.filename == nil or post.featured_image.filename == '' %}
+    <div class="featured-image" style="background-image: url({{ '/assets/img/featured/' | append: post.featured_image.filename | relative_url }});"></div>
+    {% endunless %}
+
+    <h2>
+      <a class="colour-inherit no-underline" href="{{ post.url | relative_url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+
+    {% unless post.excerpt == nil %}
+    <p>{{ post.excerpt }}</p>
+    {% endunless %}
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="columns-block">
+  <div class="col">
+    <p class="font-size-1-point-5-rem font-weight-bold">
+      Sorry, no posts could be found.
+    </p>
+  </div>
+</div>
+{% endunless %}

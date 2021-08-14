@@ -10,7 +10,7 @@ keywords:
 ---
 {%- assign resume = site.static_files | where_exp: 'file', 'file.name == "linkedin-cv.pdf"' | first -%}
 <div class="columns-block">
-  <div class="half-col">
+  <div class="col">
     <h2>
       About me
     </h2>
@@ -84,7 +84,7 @@ keywords:
     </ul>
   </div>
 
-  <div class="half-col">
+  <div class="col">
     <img class="img-centered margin-bottom-1-rem" src="{{ '/assets/img/arun.jpg' | relative_url }}" />  
 
     {% if site.email != null and site.email != '' or site.linkedin_username != null and site.linkedin_username != '' or site.github_username != null and site.github_username != '' %}
