@@ -1,7 +1,7 @@
 .post-heading {
   text-align: center;
   font-size: 3rem;
-  color: $picton-blue;
+  color: $dark-cerulean-blue;
   margin-bottom: 1.5rem;
 
   @media (max-width: 480px) {
@@ -15,12 +15,17 @@
 
 main {
   > article {
-    max-width: 1200px;
+    max-width: 85%;
     margin-bottom: .5rem;
     margin-left: auto;
     margin-right: auto;  
     background-color: #D3DAFF;
     padding: 2rem;
+
+    @include headings {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
 
     @media (max-width: 1199px) {
       max-width: 100%;
@@ -32,7 +37,7 @@ main {
     }
 
     @include headings {
-      color: $picton-blue;
+      color: $dark-cerulean-blue;
     }
 
     @include typography {
@@ -56,7 +61,7 @@ main {
     }
 
     code {
-      background-color: $picton-blue;
+      background-color: $dark-cerulean-blue;
       color: $white;
     }
 
@@ -80,6 +85,20 @@ main {
   overflow: hidden;
 }
 
+.featured-project {
+  &#stemlive {
+    .featured-image {
+      background-size: 80%;
+      background-position: center;
+      min-height: 13rem;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
 .article-read-time-text,
 .article-date-text {
   display: inline;
@@ -87,5 +106,13 @@ main {
   @media (max-width: 567px) {
     font-size: 1rem;
     vertical-align: top;
+  }
+}
+
+.project-page {
+  article {
+    a {
+      color: $dark-cerulean-blue;
+    }
   }
 }

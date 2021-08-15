@@ -1,0 +1,54 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+description: What projects have I worked on?
+bodyClasses:
+  - projects
+---
+{%- assign projects = site.projects | limit: 3 -%}
+<div class="columns-block">
+  <div class="col">
+    <h2>
+      My projects
+    </h2>
+
+    <p>
+      Below you will find some of the projects on I&rsquo;ve worked, spanning multiple sectors / industries and application categories.
+    </p>
+
+    <p>
+      Expect this page to be updated as and when I work on new and exciting projects.
+    </p>
+  </div>
+</div>
+
+{% unless projects.size < 1 %}
+<div class="three-columns-block">
+  {% for project in projects %}
+    <div class="column featured-project" {%- if project.title != nil -%}id="{{ project.title | downcase }}"{%- endif -%}>
+    {% unless project.featured_image.filename == nil or project.featured_image.filename == '' %}
+    <div class="featured-image" style="background-image: url({{ '/assets/img/projects/featured/' | append: project.featured_image.filename | relative_url }});"></div>
+    {% endunless %}
+
+    <h2 class="text-dark-cerulean-blue">
+      <a class="colour-inherit no-underline" href="{{ project.url | relative_url }}">
+        {{ project.title }}
+      </a>
+    </h2>
+
+    {% unless project.excerpt == nil %}
+    <p>{{ project.excerpt }}</p>
+    {% endunless %}
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="columns-block">
+  <div class="col">
+    <p class="font-size-1-point-5-rem font-weight-bold">
+      Sorry, no projects could be found.
+    </p>
+  </div>
+</div>
+{% endunless %}

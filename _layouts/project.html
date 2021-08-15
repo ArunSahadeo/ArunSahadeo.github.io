@@ -9,10 +9,18 @@
         <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}" />
     </head>
 
-    <body{% if page.bodyClasses != null and page.bodyClasses.size > 0 %} class="{{ page.bodyClasses | join: ' ' }}"{% endif %}>
+    <body class="project-page{% if page.bodyClasses != null and page.bodyClasses.size > 0 %} {{ page.bodyClasses | join: ' ' }}{% endif %}">
       {% include header.html %}
       <main>
-          {{ content }}
+          <div class="columns-block">
+            {% unless page.title == nil %}
+            <h1 class="post-heading">{{ page.title }}</h1>
+            {% endunless %}
+          </div>
+
+          <article>
+            {{ content }}
+          </article>
       </main>
       {% include footer.html %}
     </body>

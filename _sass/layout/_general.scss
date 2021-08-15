@@ -44,7 +44,7 @@ body {
     }
   }
 
-  &:not(.article-page) {
+  &:not(.article-page):not(.project-page) {
     > main {
       @include headings {
         &:first-child {

@@ -28,6 +28,29 @@ class Jekyll < Thor
     system(options[:editor], filename)
   end
 
+  desc "new_project", "create a new project"
+  method_option :editor, :default => "subl"
+  def new_project(*title)
+    title = title.join(" ")
+    filename = "_projects/#{title.to_url}.md"
+
+    if File.exist?(filename)
+      abort("#{filename} already exists!")
+    end
+
+    puts "Creating new post: #{filename}"
+    open(filename, 'w') do |post|
+      post.puts "---"
+      post.puts "layout: project"
+      post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+      post.puts "description: -Your Description Here-"
+      post.puts "project_category: "
+      post.puts "---"
+    end
+
+    system(options[:editor], filename)
+  end
+
   desc "tag", "create a new tag"
   method_option :editor, :default => "subl"
   def tag(*name)

@@ -20,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}" />
     </head>
 
-    <body class="article-page{% if page.bodyClass != null and page.bodyClass != '' %} {{ page.bodyClass }}{% endif %}">
+    <body class="article-page{% if page.bodyClasses != null and page.bodyClasses.size > 0 %} {{ page.bodyClasses | join: ' ' }}{% endif %}">
       {% include header.html %}
       <main>
           <div class="columns-block">
