@@ -9,6 +9,7 @@ keywords:
     - Laravel
 ---
 {%- assign resume = site.static_files | where_exp: 'file', 'file.name == "linkedin-cv.pdf"' | first -%}
+{%- assign certificates = site.data.certificates -%}
 <div class="columns-block">
   <div class="col">
     <h2>
@@ -23,35 +24,27 @@ keywords:
       I am a full-stack web developer and sysadmin from the UK, with experience working for a variety of blue chip and SME clients on applications including multilingual technical documentation sites, booking / eCommerce platforms and lead integrations for both out-of-the-box and bespoke CRM systems, to name a few.
     </p>
 
+    {%- if certificates -%}
     <h2 class="font-size-2-rem">
         Certificates
     </h2>
 
     <ul class="courses-list">
+      {%- for certificate in certificates -%}
       <li>
         <i class="icon-graduation-cap"></i>
 
         <p class="course">
-          NCFE Level 2 Certificate in Understanding Data Protection and Security
+          {{ certificate.course }}
         </p>
 
         <p class="institution">
-          North Warwickshire and South Leicestershire College
+          {{ certificate.institution }}
         </p>
       </li>
-
-      <li>
-        <i class="icon-graduation-cap"></i>
-
-        <p class="course">
-          BTEC Level 3 Extended Diploma for ICT Practitioners
-        </p>
-
-        <p class="institution">
-          3AAA Academy
-        </p>
-      </li>
+      {%- endfor -%}
     </ul>
+    {%- endif -%}
 
     <h2 class="font-size-2-rem">
         Toolkit
