@@ -97,6 +97,7 @@
       width: 2em;
       text-align: center;
       top: 3px;
+      color: $dark-cerulean-blue;
     }
 
     p {
@@ -105,6 +106,7 @@
       &.institution {
         font-size: 1.2rem;
         font-weight: bold;
+        color: $dark-cerulean-blue;
       }
     }
   }
