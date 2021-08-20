@@ -5,6 +5,10 @@
   width: 100%;
   max-width: 56%;
 
+  @include headings {
+    color: $white;
+  }
+
   @media (max-width: 1199px) {
     max-width: 75%;
   }
