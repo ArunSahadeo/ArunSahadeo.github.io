@@ -3,10 +3,12 @@ layout: default
 title: About Me
 description: I am a software developer and sysadmin from the UK, experienced in PHP, WordPress and Laravel. 
 keywords:
-    - PHP developer UK
-    - Sysadmin UK
-    - WordPress
-    - Laravel
+  - PHP developer UK
+  - Sysadmin UK
+  - WordPress
+  - Laravel
+bodyClasses:
+  - home
 ---
 {%- assign resume = site.static_files | where_exp: 'file', 'file.name == "linkedin-cv.pdf"' | first -%}
 {%- assign certificates = site.data.certificates -%}

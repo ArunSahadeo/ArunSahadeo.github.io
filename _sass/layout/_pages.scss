@@ -1,0 +1,34 @@
+body {
+  &.home {
+    // Homepage styles
+
+    > main {
+      .col {
+        &:first-of-type {
+          ul {
+            padding-left: 20px;
+
+            &.courses-list {
+              p {
+                margin-left: 15px;
+
+                @media (max-width: 567px) {
+                  font-size: 18px;
+
+                  &.course {
+                    margin-bottom: .3rem;
+                  }
+                }
+              }
+
+              i {
+                top: 4px;
+                left: -1.5em;
+              }
+            }
+          }
+        }
+      }
+    } 
+  }
+}
