@@ -14,6 +14,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-Light.svg#Yrsa-Light') format('svg'); 
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 /*
@@ -30,6 +31,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-LightItalic.svg#Yrsa-LightItalic') format('svg'); 
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
 }
 
 /*
@@ -46,6 +48,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-Regular.svg#Yrsa-Regular') format('svg'); 
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 /*
@@ -62,6 +65,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-Italic.svg#Yrsa-Italic') format('svg'); 
     font-weight: 400;
     font-style: italic;
+    font-display: swap;
 }
 
 /*
@@ -78,6 +82,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-Medium.svg#Yrsa-Medium') format('svg'); 
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 /*
@@ -94,6 +99,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-MediumItalic.svg#Yrsa-MediumItalic') format('svg'); 
     font-weight: 500;
     font-style: italic;
+    font-display: swap;
 }
 
 /*
@@ -110,6 +116,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-SemiBold.svg#Yrsa-SemiBold') format('svg'); 
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 /*
@@ -126,6 +133,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-SemiBoldItalic.svg#Yrsa-SemiBoldItalic') format('svg'); 
     font-weight: 600;
     font-style: italic;
+    font-display: swap;
 }
 
 /*
@@ -142,6 +150,7 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-Bold.svg#Yrsa-Bold') format('svg'); 
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 /*
@@ -158,4 +167,5 @@ $yrsa: 'Yrsa';
         url('#{$fontsDir}/#{$yrsa}-BoldItalic.svg#Yrsa-BoldItalic') format('svg'); 
     font-weight: 700;
     font-style: italic;
+    font-display: swap;
 }

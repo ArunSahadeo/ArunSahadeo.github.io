@@ -18,6 +18,10 @@
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
         {% if page.keywords and page.keywords != nil and page.keywords.size > 0  %}<meta name="keywords" content="{{ page.keywords | join: ', ' }}" />{% endif %}
         <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}" />
+        <link rel="preload" as="font" href="{{ '/assets/fonts/Yrsa-Regular.woff2' | relative_url }}" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" as="font" href="{{ '/assets/fonts/Yrsa-Regular.woff' | relative_url }}" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" as="font" href="{{ '/assets/fonts/Yrsa-Bold.woff2' | relative_url }}" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" as="font" href="{{ '/assets/fonts/Yrsa-Bold.woff' | relative_url }}" type="font/woff2" crossorigin="anonymous" />
     </head>
 
     <body class="article-page{% if page.bodyClasses != null and page.bodyClasses.size > 0 %} {{ page.bodyClasses | join: ' ' }}{% endif %}">
