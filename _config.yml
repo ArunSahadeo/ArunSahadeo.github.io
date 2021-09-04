@@ -23,8 +23,6 @@ strapline: Software engineer, sysadmin, tinkerer
 description: >- # this means to ignore newlines until "baseurl:"
   Software developer and sysadmin from the UK, experienced in PHP, WordPress and Laravel
 email: arunjamessahadeo@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ArunSahadeo
 linkedin_username: arun-sahadeo-00836883
 
