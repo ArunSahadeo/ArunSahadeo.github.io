@@ -38,6 +38,7 @@ permalink: /blog/:title
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 collections:
   projects:
@@ -47,10 +48,15 @@ collections:
 defaults:
   -
     scope:
-      path: ""
+      path: 'assets/files/*.pdf'
+    values:
+      sitemap: false
+  -
+    scope:
+      path: ''
       type: projects
     values:
-      layout: "project"
+      layout: 'project'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
