@@ -74,7 +74,23 @@ main {
       &.language-plaintext {
         display: inline-block;
         line-height: 16px;
-        padding-bottom: 10px;
+
+        @media (min-width: 1200px) {
+          padding-bottom: 10px;
+        }
+      }
+    }
+
+    a,
+    span {
+      &[data-text^="g"] {
+        code {
+          &.language-plaintext {
+            @media (max-width: 1199px) {
+              font-size: 1.4rem;
+            }
+          }
+        }
       }
     }
 

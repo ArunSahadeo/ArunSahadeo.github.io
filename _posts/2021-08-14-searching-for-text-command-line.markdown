@@ -31,7 +31,7 @@ Where /I allows the command to be case insensitive, and /N allows the line numbe
 
 My favourite tool for searching text is [`grep`]. It is fairly intuitive and can be lightning fast depending on the options you pass to it.
 
-This is a typical `grep` command I use:
+This is a typical <span data-text="grep">`grep`</span> command I use:
 
 ```bash
 grep -RnFil --exclude=\*.{dist,gif,git*,htaccess,htm,img,jp*g,json,lock,log,*map,Markdown,min.js,png,svg,txt,vue,vim*} --exclude-dir={.git,.gradle,.jekyll-cache,.next,.ssh,.vim,_site,bootstrap,bower,bower_components,brochure,build,caches,env,errors,img,lang*,locale,lib,media,node_modules,original,platforms,plugins,static_compiled,static,storage,tests,translations,twenty*,vendor,ViewerJS,wordpress,wp-admin,wp-includes,wp-json,www} '*STRING HERE*' .
@@ -53,7 +53,12 @@ Now to the main arguments.
 [`findstr`]: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
 {: .font-weight-bold}
 {:target="_blank"}
+{:data-text="findstr"}
 [`grep`]: https://linux.die.net/man/1/grep
 {: .font-weight-bold}
 {:target="_blank"}
+{:data-text="grep"}
 [`find`]: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/find
+{: .font-weight-bold}
+{:target="_blank"}
+{:data-text="find"}
