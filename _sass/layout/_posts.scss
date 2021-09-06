@@ -74,14 +74,7 @@ main {
       &.language-plaintext {
         display: inline-block;
         line-height: 16px;
-
-        @media (max-width: 1199px) {
-          font-size: 1.4rem;
-        }
-
-        @media (min-width: 1200px) {
-          padding-bottom: 10px;
-        }
+        font-size: 1.4rem;
       }
     }
 
