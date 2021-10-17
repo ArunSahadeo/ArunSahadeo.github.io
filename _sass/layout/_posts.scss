@@ -139,3 +139,42 @@ main {
     }
   }
 }
+
+body.blog-page {
+  main {
+    position: relative;
+  }
+
+  .category-sidebar {
+    @media (max-width: 1199px) {
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: 1200px) {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      max-width: 15%;
+    }
+
+    h3, ul {
+      @media (max-width: 1199px) {
+        text-align: center;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -39,6 +39,9 @@ plugins:
   - jekyll-sitemap
 
 collections:
+  categories:
+    output: true
+    permalink: /:collection/:name
   projects:
     output: true
     permalink: /:collection/:name
@@ -55,6 +58,12 @@ defaults:
       type: projects
     values:
       layout: 'project'
+  -
+    scope:
+      path: ''
+      type: categories
+    values:
+      layout: 'category'
 
 # Exclude from processing.
 # The following items will not be processed, by default.

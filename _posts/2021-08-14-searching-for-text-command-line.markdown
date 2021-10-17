@@ -9,6 +9,8 @@ excerpt: >-
 featured_image:
     filename: 'json-text.jpg'
     alt: 'JSON'
+categories:
+  - command-line
 ---
 
 The terminal commands available to you to search for text, in either files or command output, depends on your operating system.

@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<h1 class="text-center">Category: <em>{{ page.slug | replace: '-', ' ' | capitalize }}</em></h1>
+
+{%- assign category_query = "post.categories contains '" | append: page.slug | append: "'" -%}
+{%- assign category_posts = site.posts | group_by_exp: 'post', category_query -%}
+
+{%- if category_posts != nil -%}
+  {%- assign posts = category_posts[0].items -%}
+{%- endif -%}
+
+{%- if page.content -%}
+<div class="columns-block">
+  <div class="col">
+    {{ page.content }}
+  </div>
+</div>
+{%- endif -%}
+
+{%- unless posts === nil -%}
+<div class="three-columns-block">
+  {% for post in posts %}
+  <div class="column featured-post">
+    {% unless post.featured_image.filename == nil or post.featured_image.filename == '' %}
+    <div class="featured-image" style="background-image: url({{ '/assets/img/featured/' | append: post.featured_image.filename | relative_url }});"></div>
+    {% endunless %}
+
+    <h2 class="text-dark-cerulean-blue">
+      <a class="colour-inherit no-underline" href="{{ post.url | relative_url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+
+    {% unless post.excerpt == nil %}
+    <p>{{ post.excerpt }}</p>
+    {% endunless %}
+  </div>
+  {% endfor %}
+</div>
+{%- endunless -%}

@@ -3,7 +3,11 @@ layout: default
 title: Blog
 permalink: /blog/
 description: My thoughts and insights into various topics, primarily development focussed.
+bodyClasses:
+  - blog-page
 ---
+{%- assign categories = site.posts | group_by: 'categories' -%}
+
 {%- assign posts = site.posts | limit: 3 -%}
 <div class="columns-block">
   <div class="col">
@@ -50,3 +54,19 @@ description: My thoughts and insights into various topics, primarily development
   </div>
 </div>
 {% endunless %}
+
+{%- unless categories == nil -%}
+  <div class="sidebar category-sidebar">
+    <h3>
+      Categories
+    </h3>
+
+    <ul>
+      {%- for category in categories -%}
+        {%- assign slug = category.name | replace: '["', '' | replace: '"]', '' -%}
+        {%- assign category_object = site.categories | where: 'slug', slug | first -%}
+      <li><a href="{{ category_object.url | relative_url }}">{{ category_object.title }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endunless -%}
