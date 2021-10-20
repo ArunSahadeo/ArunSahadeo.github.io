@@ -11,7 +11,8 @@ bodyClasses:
   - home
 ---
 {%- assign resume = site.static_files | where_exp: 'file', 'file.name == "linkedin-cv.pdf"' | first -%}
-{%- assign certificates = site.data.certificates -%}
+{%- assign certificates = site.data.about.certificates -%}
+{%- assign toolkits = site.data.about.toolkits -%}
 <div class="columns-block">
   <div class="col">
     <h2>
@@ -48,35 +49,19 @@ bodyClasses:
     </ul>
     {%- endif -%}
 
+    {%- if toolkits -%}
     <h2 class="font-size-2-rem">
         Toolkit
     </h2>
 
     <ul>
+      {%- for toolkit in toolkits -%}
         <li>
-          HTML / CSS / JavaScript / jQuery
+          {{ toolkit }}
         </li>
-
-        <li>
-          MySQL / PostgreSQL
-        </li>
-
-        <li>
-          PHP / Ruby / Python
-        </li>
-
-        <li>
-          WordPress / WooCommerce / Laravel
-        </li>
-
-        <li>
-          Apache / NGINX
-        </li>
-
-        <li>
-          Ubuntu / centOS
-        </li>
+      {%- endfor -%}
     </ul>
+    {%- endif -%}
   </div>
 
   <div class="col">
