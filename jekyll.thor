@@ -1,8 +1,8 @@
 require "stringex"
 class Jekyll < Thor
-  desc "new", "create a new post"
+  desc "new_post", "create a new post"
   method_option :editor, :default => "subl"
-  def new(*title)
+  def new_post(*title)
     title = title.join(" ")
     date = Time.now.strftime('%Y-%m-%d')
     hour = Time.now.strftime('%H:%M:%S')
