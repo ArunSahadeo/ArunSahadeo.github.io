@@ -28,9 +28,22 @@ bodyClasses:
 {% unless posts.size < 1 %}
 <div class="three-columns-block">
   {% for post in posts %}
+    {%- assign content_length = post.content | strip | size -%}
+    {%- assign excerpt_length = post.excerpt | strip | size -%}
+    {%- unless content_length > 0 and excerpt_length > 0 -%}
+      {% continue %}
+    {%- endunless -%}
+
+    {% if post.featured_image.filename != nil or post.featured_image.filename != '' %}
+      {%- assign featured_image = post.featured_image.filename -%}
+
+      {% unless featured_image contains '/assets/img/featured/' %}
+        {%- assign featured_image = featured_image | prepend: '/assets/img/featured/' -%}
+      {% endunless %}
+    {% endif %}
   <div class="column featured-post">
-    {% unless post.featured_image.filename == nil or post.featured_image.filename == '' %}
-    <div class="featured-image" style="background-image: url({{ '/assets/img/featured/' | append: post.featured_image.filename | relative_url }});"></div>
+    {% unless featured_image == nil or featured_image == '' %}
+    <div class="featured-image" style="background-image: url({{ featured_image | relative_url }});"></div>
     {% endunless %}
 
     <h2 class="text-dark-cerulean-blue">
