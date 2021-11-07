@@ -34,11 +34,26 @@ bodyClasses:
 
     <ul class="courses-list">
       {%- for certificate in certificates -%}
+          {%- assign certificate_link = nil -%}
+
+          {%- if certificate.link -%}
+            {%- unless certificate.link.external -%}
+              {%- assign certificate_link = '/assets/img/certificates/' | append: certificate.link.path | relative_url -%}
+            {%- else -%}
+              {%- assign certificate_link = certificate.link.path -%}
+            {%- endunless -%}
+          {%- endif -%}
       <li>
         <i class="icon-graduation-cap"></i>
 
         <p class="course">
-          {{ certificate.course }}
+          {%- if certificate_link != nil -%}
+          <a href="{{ certificate_link}}"{% if certificate.link.external %} target="_blank"{% endif %}>
+            {{ certificate.course }}
+          </a>
+          {%- else -%}
+            {{ certificate.course }}
+          {%- endif -%}
         </p>
 
         <p class="institution">

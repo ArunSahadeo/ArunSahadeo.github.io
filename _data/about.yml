@@ -1,5 +1,11 @@
 certificates:  
   -
+    course: AWSome Day Online Conference 2021 - Certificate of Attendance
+    institution: Amazon
+    link:
+      external: false
+      path: awsome-2021.png
+  -
     course: NCFE Level 2 Certificate in Understanding Data Protection and Security
     institution: North Warwickshire and South Leicestershire College
   -

@@ -103,6 +103,12 @@
     p {
       margin-bottom: 0;
 
+      a {
+        color: $dark-cerulean-blue;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
       &.institution {
         font-size: 1.2rem;
         font-weight: bold;
