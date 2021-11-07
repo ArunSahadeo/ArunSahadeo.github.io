@@ -156,3 +156,7 @@ We raise 2 to the power of 4 to show us the total number of IP addresses we can 
 We then subtract two from this result, as neither the network nor the broadcast address can be assigned to devices in the network.
 
 So with 2⁴ being equal to 16, we have 16 IP addresses in total, with 2 of those being reserved for use by the network, giving us 14 IP addresses overall that can be assigned to network devices.
+
+And since 10.88.135.144, the first IP in our hypothetical subnet, is reserved for use, the first usable IP is 10.88.135.145.
+
+Conversely, the last IP in our hypothetical subnet, 10.88.135.159, is also reserved, meaning that the last usable IP is 10.88.135.158.
