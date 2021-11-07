@@ -60,7 +60,7 @@ However, for numbers greater than 16, we will need to perform an operation known
 
 **1 / 2 = 0.5 (1, as there is a remainder)**
 
-We stop at 0 because 0 / 2 will always be 0.
+We stop our binary division operation once the quotient is equal to 0.
 
 Since 88 has no fractional value, we start building our octet by beginning with the last result (i.e. the 1 we derived as our binary or truthy value from dividing 1 by 2) and ending with the first result.
 
