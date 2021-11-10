@@ -23,7 +23,11 @@ Then the first three octets of the IP address are reserved to the network, and t
 
 ### What is the network address?
 
+The network address is used for identifying the parts of an IP address that are reserved to the network, and can be used to identify the subnet.
+
 ### What is the broadcast address?
+
+Addresses all of the devices in the target network simultaneously.
 
 ### Converting an IP address into binary form
 
