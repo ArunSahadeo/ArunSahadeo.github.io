@@ -17,7 +17,9 @@ The subnet mask is used to identify which octets in an IP address are reserved t
 
 So for example, if you take the following subnet mask:
 
-255.255.255.0
+<p class="emphasis-paragraph" markdown="1">
+  255.255.255.0
+</p>
 
 Then the first three octets of the IP address are reserved to the network, and the fourth and final octet is the host section.
 
@@ -88,9 +90,7 @@ Calculating the subnet mask is a matter of working out how many 1s and how many 
 
 The number of 1s is equal to the CIDR prefix, in our case 28, whereas the number of 1s is equal to 32 minus the CIDR prefix which, given that ours is 28, equals 4.
 
-So the subnet mask is 
-
-11111111 11111111 11111111 11110000
+So the subnet mask is 11111111 11111111 11111111 11110000
 
 Now, to convert these four binary octets to denary, we need to do as follows:
 
@@ -111,7 +111,7 @@ For the last octet, 11110000, this would be:
 - **128 + 64 + 32 + 16**
 - **240**
 
-So our subnet mask, if the CIDR or routing prefix is **/28**, is equal to 255.255.255.240.
+So our subnet mask, if the CIDR or routing prefix is **/28**, is equal to **255.255.255.240**.
 
 Now onto the rest...
 
