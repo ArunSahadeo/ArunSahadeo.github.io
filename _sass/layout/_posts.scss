@@ -15,25 +15,47 @@
 
 main {
   > article {
-    max-width: 85%;
+    max-width: 65%;
     margin-bottom: .5rem;
     margin-left: auto;
     margin-right: auto;  
     background-color: #D3DAFF;
     padding: 2rem;
 
+    .article-inner {
+      max-width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+
+      p {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
     @include headings {
       margin-top: 0;
       margin-bottom: 1.5rem;
+      text-align: center;
     }
 
     @media (max-width: 1199px) {
       max-width: 100%;
     }
 
+    @media (min-width: 568px) and (max-width: 991px) {
+      max-width: 85%;
+    }
+
     @media (max-width: 767px) {
       padding-left: 1rem;
       padding-right: 1rem;
+    }
+
+    @media (max-width: 320px) {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     @include headings {
@@ -61,6 +83,8 @@ main {
     p,
     ol {
       font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
     ol {

@@ -72,7 +72,7 @@ From this, we derive 1011000, and since it is only 7 digits long, we prefix 0 to
 
 Following suit for 135 and 144 produces 10000111 and 10011010 respectively.
 
-## Our IP address in binary form
+### Our IP address in binary form
 
 0000 1010 (10 in binary form) - 0101 1000 (88 in binary form) - 1000 0111 (135 in binary form) - 1001 1010 (144 in binary form)
 
@@ -115,7 +115,7 @@ So our subnet mask, if the CIDR or routing prefix is **/28**, is equal to 255.25
 
 Now onto the rest...
 
-**Calculating the network and broadcast address**
+### Calculating the network and broadcast address
 
 Remember our IP address in binary form:
 
