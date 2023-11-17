@@ -5,6 +5,7 @@ layout: default
 
 {%- assign category_query = "post.categories contains '" | append: page.slug | append: "'" -%}
 {%- assign category_posts = site.posts | group_by_exp: 'post', category_query -%}
+{%- assign category_posts = category_posts | where: 'name', page.slug -%}
 
 {%- if category_posts != nil -%}
   {%- assign posts = category_posts[0].items -%}
