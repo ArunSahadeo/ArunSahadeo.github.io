@@ -27,3 +27,21 @@ bundle install
 ```
 bundle exec jekyll serve
 ```
+
+## Creating new posts
+
+```
+thor jekyll:new_post --title \*TITLE HERE\* --categories \*CATEGORIES HERE\*
+```
+
+## Creating new projects
+
+```
+thor jekyll:new_project \*CATEGORIES HERE\*
+```
+
+## Creating new tags
+
+```
+thor jekyll:tag \*TITLE HERE\*
+```
