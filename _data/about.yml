@@ -19,15 +19,15 @@ toolkits:
   -
     category: databases
     tools:
-      - MySQL / PostgreSQL
+      - MySQL / PostgreSQL / BigQuery / Oracle DB / SQLite
   -
     category: languages
     tools:
-      - PHP / Ruby / Python
+      - PHP / Ruby / Python / Powershell
   -
     category: saas
     tools:
-      - WordPress / WooCommerce / Laravel / Shopify / Squarespace
+      - WordPress / WooCommerce / Laravel / Shopify / Squarespace / Tableau
   -
     category: servers
     tools:
@@ -35,7 +35,7 @@ toolkits:
   -
     category: distros
     tools:
-      - Ubuntu / centOS
+      - Ubuntu / centOS / Debian / Arch Linux
   -
     category: iaas
     tools:
