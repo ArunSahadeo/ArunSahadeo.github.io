@@ -23,9 +23,19 @@ bodyClasses:
       Hi there, and welcome to my site. I hope you find what you&rsquo;re looking for.
     </p>
 
+    {% unless site.current_employer == null or site.current_employer == '' %}
+		<p>
+			{%- if site.current_employer_link != null and site.current_employer_link != '' -%}
+			I am a Software Engineer and sysadmin from the UK, currently employed as a {{ site.current_role }} at <a href="{{ site.current_employer_link }}" target="_blank">{{ site.current_employer }}</a>. I have been engaged in projects for a variety of clients spanning a multitude of industries, including automotive (whether OEMs or body shops), lead generation (including bespoke CRM development), and third sector agencies.
+			{%- else -%}
+			I am a Software Engineer and sysadmin from the UK, currently employed as a {{ site.current_role }} at {{ site.current_employer }}.
+			{%- endif -%}
+		</p>
+		{% else %}
     <p>
-      I am a full-stack web developer and sysadmin from the UK, with experience working for a variety of blue chip and SME clients on applications including multilingual technical documentation sites, booking / eCommerce platforms and lead integrations for both out-of-the-box and bespoke CRM systems, to name a few.
+      I am a Software Engineer and sysadmin from the UK, with experience working for a variety of blue chip and SME clients on applications including multilingual technical documentation sites, booking / eCommerce platforms and lead integrations for both out-of-the-box and bespoke CRM systems, to name a few.
     </p>
+		{% endunless %}
 
     {%- if certificates -%}
     <h2 class="font-size-2-rem">

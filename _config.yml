@@ -29,6 +29,11 @@ linkedin_username: arun-sahadeo-00836883
 # Location settings
 location: London, England
 
+# Employment settings
+current_employer: Tata Consultancy Services
+current_employer_link: https://www.tcs.com
+current_role: Data Engineer
+
 # Permalink settings
 permalink: /blog/:title
 
