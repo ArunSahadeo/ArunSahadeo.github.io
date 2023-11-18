@@ -1,4 +1,4 @@
-certificates:  
+certificates:
   -
     course: AWSome Day Online Conference 2021 - Certificate of Attendance
     institution: Amazon
@@ -13,16 +13,30 @@ certificates:
     institution: 3AAA Academy
 toolkits:
   -
-    HTML / CSS / JavaScript / jQuery
+    category: frontend
+    tools:
+      - HTML / CSS / JavaScript / jQuery
   -
-    MySQL / PostgreSQL
+    category: databases
+    tools:
+      - MySQL / PostgreSQL
   -
-    PHP / Ruby / Python
+    category: languages
+    tools:
+      - PHP / Ruby / Python
   -
-    WordPress / WooCommerce / Laravel / Shopify / Squarespace
+    category: saas
+    tools:
+      - WordPress / WooCommerce / Laravel / Shopify / Squarespace
   -
-    Apache / NGINX
+    category: servers
+    tools:
+      - Apache / NGINX
   -
-    Ubuntu / centOS
+    category: distros
+    tools:
+      - Ubuntu / centOS
   -
-    AWS / WP Engine / Laravel Forge
+    category: iaas
+    tools:
+      - AWS / WP Engine / Laravel Forge

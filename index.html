@@ -75,17 +75,27 @@ bodyClasses:
     {%- endif -%}
 
     {%- if toolkits -%}
-    <h2 class="font-size-2-rem">
-        Toolkit
-    </h2>
+		<div class="toolkits-section">
+			<h2 class="font-size-2-rem">
+					Toolkit
+			</h2>
 
-    <ul>
-      {%- for toolkit in toolkits -%}
-        <li>
-          {{ toolkit }}
-        </li>
-      {%- endfor -%}
-    </ul>
+			<ul class="toolkits-list three-columns-block">
+				{%- for toolkit in toolkits -%}
+					{%- assign toolkit_logo_query = 'file.name == "' | append: toolkit.category | append: '.png"' -%}
+					{%- assign toolkit_logo = site.static_files | where_exp: 'file', 'file.path contains "files/images/toolkits"' | where_exp: 'file', toolkit_logo_query | first -%}
+					<div class="column">
+						<img src="{{ toolkit_logo.path }}" />
+
+						{%- for tool in toolkit.tools -%}
+						<li>
+							{{ tool }}
+						</li>
+						{%- endfor -%}
+					</div>
+				{%- endfor -%}
+			</ul>
+		</div>
     {%- endif -%}
   </div>
 

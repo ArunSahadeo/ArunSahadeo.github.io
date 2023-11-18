@@ -6,7 +6,9 @@ body {
       .col {
         &:first-of-type {
           ul {
-            padding-left: 20px;
+						&:not(.toolkits-list) {
+							padding-left: 20px;
+						}
 
             &.courses-list {
               p {

@@ -117,3 +117,39 @@
     }
   }
 }
+
+.toolkits-section {
+	position: relative;
+	min-height: 50rem;
+}
+
+.toolkits-list {
+	padding-left: 0;
+	margin-top: 0;
+	max-width: 100%;
+
+	li {
+		list-style-type: none;
+	}
+
+	@media (min-width: 400px) {
+		position: absolute;
+		top: 5rem;
+	}
+
+	img {
+		max-width: 80%;
+		height: auto;
+		margin-bottom: 1rem;
+	}
+
+	> .column {
+		max-width: 25%;
+		flex-basis: 25%;
+
+		@media (max-width: 400px) {
+			max-width: 40%;
+			flex-basis: 40%;
+		}
+	}
+}
