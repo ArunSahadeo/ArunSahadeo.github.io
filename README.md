@@ -13,6 +13,10 @@ rvm install ruby-2.7.8 --with-openssl-dir=$HOME/.rvm/usr
 rvm use 2.7.8
 ```
 
+UPDATED:
+
+Using Ruby 3.4.5.
+
 ## Installing gems / dependencies
 
 Installation instructions (once the instructions for **RVM** are executed) are as follows:
